@@ -7,6 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Classe = require('../api/classe/classe.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -28,6 +29,69 @@ Thing.find({}).remove(function() {
     name : 'Deployment Ready',
     info : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
   });
+});
+
+Classe.find({}).remove(function() {
+  Classe.create({
+    libelle: 'sixième',
+    abrev: '6e',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'cinquième',
+    abrev: '5e',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'quatrième',
+    abrev: '4e',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'troisième',
+    abrev: '3e',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'seconde S',
+    abrev: '2nd S',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'seconde L',
+    abrev: '2nd L',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'première S1',
+    abrev: '1ere S1',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'première S2',
+    abrev: '1ere S2',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'première L1',
+    abrev: '1ere L1',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'première L2',
+    abrev: '1ere L2',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'terminal S1',
+    abrev: 'Tle S1',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'terminal S2',
+    abrev: 'Tle S2',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'terminal L1',
+    abrev: 'Tle L1',
+  annee_academ: '2016/2017'
+  }, {
+    libelle: 'terminal L2',
+    abrev: 'Tle L2',
+  annee_academ: '2016/2017'
+  }, function() {
+      console.log('finished populating Classes');
+    }
+  );
 });
 
 User.find({}).remove(function() {
