@@ -4,9 +4,9 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var CoursSchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+    classe: Schema.ObjectId,
+    matiere: Schema.ObjectId,
+    coeff: Number
 });
 
 module.exports = mongoose.model('Cours', CoursSchema);
