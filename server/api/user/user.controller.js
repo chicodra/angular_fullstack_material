@@ -25,6 +25,12 @@ exports.ind = function(req, res) {
     res.status(200).json(users);
   });
 };
+exports.getByRole = function(req, res) {
+  User.find({role:req.params.id}, function (err, users) {
+    if(err) return res.status(500).send(err);
+    res.status(200).json(users);
+  });
+};
 
 /**
  * Creates a new user
@@ -51,6 +57,7 @@ exports.show = function (req, res, next) {
     res.json(user.profile);
   });
 };
+
 
 /**
  * Deletes a user
