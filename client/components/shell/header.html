@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+                                                                                
+                                                                                                                                                                                                                                                                                                           <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <meta name="apple-itunes-app" content="app-id=825500330">
+    <meta name="apple-itunes-app-tab" content="app-id=825500330">
+    <meta name="google-play-app" content="app-id=com.kartable.android">
+    <meta name="google-play-app-tab" content="app-id=com.kartable.android">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="La première plateforme d&#039;apprentissage et de révisions scolaires complète et gratuite. Conforme aux programmes officiels de l&#039;Education nationale, Kartable couvre toutes les classes et toutes les matières du collège au lycée.">
+    <meta name="keywords" content="Littérature, Mathématiques, Français, Histoire, Géographie, Physique-Chimie, SVT, Sciences de la vie et de la terre, SES, Sciences économiques et sociales, Anglais, Espagnol, Philosophie, Sciences, 6e, Sixième, 5e, Cinquième, 4e, Quatrième, 3e, Troisième, 2nde, Seconde, 1S, Première S, 1ES, Première ES, 1L, Première L, TS, Terminale S, TES, Terminale ES, TL, Terminale L, Cours, Formulaires, Quiz, Méthodes, Exercices, Problèmes, Etudes de cas, Chronologies, Personnages, Notions, Exercices fondamentaux, Fiches brevet, Fiches bac, Quiz brevet, Quiz bac, Reformulations, Traductions, Exemples et citations, Théories, Dissertations types bac, Commentaires types bac, Fiches mémo, Cartes bilan, Cartes, Schémas bac, Mécanismes, Savoir-faire, Inventions types bac, Profils d&#039;œuvres, Questions sur corpus types bac, Procédés littéraires, Exposés types bac, Schémas de synthèse, Exercices de connaissances">
+    <meta name="robots" content="noarchive">
+    
+    <link rel="apple-touch-icon" href="https://www.kartable.fr/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="https://www.kartable.fr/apple-touch-icon-precomposed.png">
+    <meta name="msapplication-config" content="none" />
+    <link rel="icon" href="https://assets.kartable.fr/20161216153757/bundles/kartablecore/ico/favicon.ico?1481899149" />
+    <title>Kartable : Cours, méthodes, exercices corrigés gratuit toutes matières</title>
+    <link href="https://assets.kartable.fr/20161216153757/css/33d9b6b.css?1481899149" rel="stylesheet" type="text/css" />
+        
+    <link href="https://assets.kartable.fr/20161216153757/bundles/kartablecore/css/front_kartable.css?1481899149" rel="stylesheet" type="text/css" />
+    <link href="https://assets.kartable.fr/20161216153757/bundles/kartablecore/css/introjs.css?1481899149" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://assets.kartable.fr/20161216153757/bundles/kartablecore/select2/select2.css?1481899149"/>
+    <link rel="stylesheet" href="https://assets.kartable.fr/20161216153757/bundles/kartablecore/css/jquery.ultimate-smartbanner.css?1481899149" type="text/css" media="screen">
+    <!--[if gte IE 9]>
+    <link href="https://assets.kartable.fr/20161216153757/bundles/kartablecore/css/ie9.css?1481899149" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+            for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+
+            var mixpanelCallbacks = [];
+            var mixpanelIsLoaded = false;
+            var mixpanelEnabled = true;
+            var withMixpanel = function(callback) {
+                try {
+                    if (mixpanelEnabled) {
+                        mixpanelCallbacks.push(callback);
+                        flushQueue();
+                    }
+                } catch (e) {
+                    if (e instanceof Error) {
+                        console.error(e.message);
+                    } else {
+                        console.error(e);
+                    }
+                }
+            };
+
+            var flushQueue = function() {
+                if (mixpanelIsLoaded && hullIsLoaded) {
+                    for(var i = 0; i < mixpanelCallbacks.length; i++) {
+                        mixpanelCallbacks[i]();
+                    }
+                    mixpanelCallbacks = [];
+                }
+            };
+
+            var mixpanelLoadedCallback = function() {
+                mixpanelIsLoaded = true;
+                flushQueue();
+            };
+
+            if (mixpanelEnabled) {
+                mixpanel.init("61c55d2af9a9b94287f9b43c34bac885", {
+                    api_host: "https://api.mixpanel.com",
+                    loaded: mixpanelLoadedCallback,
+                    persistence: 'localStorage',
+                    track_pageview: false
+                });
+            }
+        </script>
+
+                        <script>
+            var hullIsLoaded = false;
+            window.hullAsyncInit = function() {
+                hullIsLoaded = true;
+                flushQueue();
+            }
+        </script>
+        <script async id="hull-js-sdk"
+                platform-id="57f26b482eeece44d50004f5"
+                org-url="https://e85cd4f3.hullapp.io"
+                src="https://js.hull.io/0.10.0/hull.js.gz"
+                access-token="false"
+        >
+        </script>
+            
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43627032-1', 'auto');
+        ga('set', 'dimension1', "disconnected");
+        ga('send', 'pageview');
+    </script>
+    <script src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/bootstrap/js/jquery-2.1.1.min.js?1481899149"></script>
+            <script type="text/javascript" src="//try.abtasty.com/66025ab39f0d213554e6100c4c803bad.js"></script>
+</head>
+<body>
+
+
+
+<header class="header_landing ">
+    <div class="container">
+        <div id="logo">
+            <a href="/"><img src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/icons/logo_no_space.png?1481899149" alt="Kartable" width="118"/></a>
+        </div>
+                <div class="fright">
+                <a class="mixpanelSubscriptionLink not_mobile" href="/premium">S'abonner</a>
+                <a href="/fonctionnalites" class="not_mobile">Fonctionnalités</a>
+                <a href="https://support.kartable.fr" target="_blank" class="not_mobile">Aide</a>
+
+                <span class="divider_header not_mobile"></span>
+
+                <div id="signUpAccess">
+                    <a class="sign_up_modal not_mobile open_popover">S'inscrire</a>
+                    <div id="signUpForm" class="kartable_popover">
+                        <div class="container_form"></div>
+                    </div>
+                </div>
+                <div id="loginAccess">
+                    <a class="login_modal not_mobile open_popover">Se connecter</a>
+                    <div id="loginForm" class="kartable_popover">
+                        <div class="container_form"></div>
+                    </div>
+                </div>
+                <div id="menuAccess" class="only_mobile">
+                    <a class="open_menu"><i class="menu"></i></a>
+                    <div id="menuHeader">
+                        <a class="mixpanelSubscriptionLink" href="/premium">S'abonner</a>
+                        <a href="/fonctionnalites">Fonctionnalités</a>
+                                                <a href="https://support.kartable.fr" target="_blank">Aide</a>
+                        <span class="form_divider">ou</span>
+                        <a class="sign_up_modal not_mobile open_popover_mobile">S'inscrire</a>
+                        <a class="login_modal not_mobile open_popover_mobile">Se connecter</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+</header>
+<div id="landingPage">
+    <div class="scroll-wrapper scrollbar_show">
+      <div class="scroll-content scrollbar_show scroll-scrolly-visible">
+
+        <div class="bg_gradient"></div>
+
+        <div id="landing">
+          <div id="userChoiceType">
+                <div class="container">
+                    <a class="active" data-value="STUDENT" href="/">Élève</a>
+                    <a href="/parent">Parent</a>
+                    <a href="/enseignant">Enseignant de l'Éducation nationale</a>
+                    <a href="/professeur">Professeur particulier</a>
+                </div>
+          </div>
+          <div class="container">
+
+                <div class="select_round only_mobile">
+                    <span class="current">Elève <i class="arrow_dropdown"></i></span>
+                    <div class="dropdown">
+                        <span class="option active" data-href="/">Elève</span>
+                        <span class="option" data-href="/parent">Parent</span>
+                        <span class="option" data-href="/enseignant">Enseignant de l'Éducation nationale</span>
+                        <span class="option" data-href="/professeur">Professeur particulier</span>
+                    </div>
+                </div>
+
+                <h1>Boostez vos notes comme <nobr>1 million</nobr> d’élèves.</h1>
+
+                <div class="selectionLevels not_mobile">
+                    <h2>Découvrez Kartable avant de vous inscrire</h2>
+                                            <a class="level" href="/sixieme">6e</a>
+                                            <a class="level" href="/cinquieme">5e</a>
+                                            <a class="level" href="/quatrieme">4e</a>
+                                            <a class="level" href="/troisieme">3e</a>
+                                            <a class="level" href="/seconde">2nde</a>
+                                            <a class="level" href="/premiere-s">1S</a>
+                                            <a class="level" href="/premiere-es">1ES</a>
+                                            <a class="level" href="/premiere-l">1L</a>
+                                            <a class="level" href="/terminale-s">TS</a>
+                                            <a class="level" href="/terminale-es">TES</a>
+                                            <a class="level" href="/terminale-l">TL</a>
+                                    </div>
+
+                <div id="quickSignUp">
+                    <h2>Accédez gratuitement aux cours</h2>
+                    <div class="container_form">
+                        <form class="sign_up_form">
+                            <div class="form_row">
+                                <div class="form_collapse">
+                                    <input class="form_input" type="text" placeholder="Adresse email" />
+                                    <button type="submit" >S'inscrire</button>
+                                </div>
+                            </div>
+                             <span>
+                                    En vous inscrivant, vous autorisez Kartable à vous envoyer ses communications par email.
+                                </span>
+                        </form>
+                        <div class="form_divider">ou</div>
+                        <a class="connect_with_facebook">S'inscrire avec Facebook</a>
+                    </div>
+                </div>
+
+                <div class="selectionLevels only_mobile">
+                    <h2>Découvrez Kartable avant de vous inscrire</h2>
+                                            <a class="level" href="/sixieme">6e</a>
+                                            <a class="level" href="/cinquieme">5e</a>
+                                            <a class="level" href="/quatrieme">4e</a>
+                                            <a class="level" href="/troisieme">3e</a>
+                                            <a class="level" href="/seconde">2nde</a>
+                                            <a class="level" href="/premiere-s">1S</a>
+                                            <a class="level" href="/premiere-es">1ES</a>
+                                            <a class="level" href="/premiere-l">1L</a>
+                                            <a class="level" href="/terminale-s">TS</a>
+                                            <a class="level" href="/terminale-es">TES</a>
+                                            <a class="level" href="/terminale-l">TL</a>
+                                    </div>
+
+                <div id="official">
+                    <img src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/img/programmeofficiel.png?1481899149" alt="Programme officiel 2016-2017" />
+                </div>
+            </div>
+        </div>
+        <div id="methodsKartable">
+            <div class="container">
+
+                <h2>Laissez-vous guider par la méthode Kartable</h2>
+
+                <div class="illustration">
+                    <img src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/img/feature.png?1481899149" alt="Features" width="388">
+                </div>
+
+                <div id="point">
+                    <div class="discover_point">
+                        <h3>J'apprends</h3>
+                        <p>Accédez rapidement à tous les cours depuis une interface claire. Tout est complet et parfaitement structuré.</p>
+                    </div>
+                    <div class="discover_point">
+                        <h3>Je m’entraîne</h3>
+                        <p>Assimilez toutes les notions des programmes à l’aide de <nobr>50 000</nobr> exercices corrigés. Plus aucune surprise lors des contrôles.</p>
+                    </div>
+                    <div class="discover_point">
+                        <h3>Je m’évalue</h3>
+                        <p>Validez vos acquis et découvrez votre classement par rapport aux autres élèves. Un seul objectif : récolter le plus de badges possibles.</p>
+                    </div>
+                </div>
+
+                <div class="know_more">
+                    <a href="/fonctionnalites">Découvrez les fonctionnalités</a>
+                </div>
+
+            </div>
+        </div>
+        <div id="subscriptions">
+            <div class="container">
+                <h2>Libérez toute la puissance de Kartable</h2>
+                <h3>Avec le compte Kartable gratuit, accédez à tous les cours sans restriction ou optez pour l’abonnement au compte Premium pour vous entraîner de façon intensive.</h3>
+
+                    <div class="subscription_card free">
+        <div class="subscription_name">
+            <h4>Kartable <span>Gratuit</span></h4>
+        </div>
+        <div class="subscription_perks">
+            <ul>
+                <li><i class="check_dark"></i> Accès illimité à tous les cours, exercices et évaluations</li>
+                <li class="no"><i class="no_check"></i> Accès illimité aux corrections d’exercices</li>
+                <li class="no"><i class="no_check"></i> Accès illimité aux corrections des évaluations</li>
+                <li class="no"><i class="no_check"></i> Accès à l'application mobile en mode hors-ligne</li>
+                <li class="no"><i class="no_check"></i> Téléchargement et impression des cours et exercices en PDF</li>
+            </ul>
+        </div>
+        <div class="subscription_cta">
+            <a class="pre_register_modal ">S'inscrire pour commencer</a>
+        </div>
+    </div>
+        <div id="offerRecommended" class="subscription_card recommended">
+            <div class="subscription_recommended"><i class="icon_recommended"></i>Recommandé</div>
+            <div class="subscription_name">
+                <h4>
+                                Premium
+                    <span><span>À partir de </span><span class="kartable_price"> 4,99 €</span> <sub>/ mois</sub></span>
+                </h4>
+                <h4 class="titlePremiumModalContent hidden">
+                    Devenez Premium
+                    <span><span>À partir de </span><span class="kartable_price"> 4,99 €</span> <sub>/ mois</sub></span>
+                </h4>
+
+            </div>
+            <div class="subscription_perks">
+                <ul>
+                    <li><i class="check_dark"></i> Accès illimité à tous les cours, exercices et évaluations</li>
+                    <li><i class="check_dark"></i> Accès illimité aux corrections d’exercices</li>
+                    <li><i class="check_dark"></i> Accès illimité aux corrections des évaluations</li>
+                    <li><i class="check_dark"></i> Accès à l'application mobile en mode hors-ligne</li>
+                    <li><i class="check_dark"></i> Téléchargement et impression des cours et exercices en PDF</li>
+                </ul>
+            </div>
+
+            <p class="hidden premiumModalContent" id="freeContentLimitReached">
+                <strong>Votre avez atteint la limite de consultation des corrigés d'exercices avec votre compte
+                    gratuit.</strong>
+                Pour accéder à tous les corrigés d'exercices et profiter de toutes les fonctionnalités de Kartable, nous vous
+                invitons à vous abonner au compte premium.
+            </p>
+            <p class="hidden premiumModalContent" id="evalationCorrectionAccess">
+                <strong>Votre compte actuel ne vous permet pas d'accéder aux corrigés des évaluations.</strong>
+                Pour accéder à tous les corrigés des évaluations et profiter de toutes les fonctionnalités de Kartable, nous
+                vous invitons à vous abonner au compte premium.
+            </p>
+            <p class="hidden premiumModalContent" id="pdfAccess">
+                <strong>Votre compte actuel ne vous permet pas d'accèder au téléchargement des cours en PDF.</strong>
+                Pour télécharger tous les cours en PDF et profiter de toutes les fonctionnalités de Kartable, nous vous invitons
+                à vous abonner au compte premium.
+            </p>
+
+            <div class="subscription_cta ">
+                <a class="btn selectPlanLink"
+                href="/premium/paiement/b2c_1m?source=HP+student"
+                data-price="4.99" data-offer-identifier="b2c_1m" data-mixpanel-source="HP student">
+                    S'abonner
+                </a>
+                
+                    </div>
+        </div>
+        </div>
+        </div>
+</div>
+    </div>
+</div>
+
+
+<!-- script -->
+
+                    <script>
+            var jsConfig = {
+                token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3LmthcnRhYmxlLmZyIiwiZXhwIjoxNDgxOTA2ODU3LCJkYXRhIjpbXX0.WKVsIsEHbLzR-qLZAPMUnI1k68LwfhY-Fxlbog9GvtM",
+                user: {"shouldAuthenticate":false,"status":"OFFLINE"},
+                gateway: {"wsConnectionString":"https:\/\/node.kartable.fr:3010","sylapsConnectionString":"https:\/\/sylaps.kartable.fr:8443","hasAnOpenedRoom":false,"deviceType":"desktop"},
+                navigationContext: null,
+                gift: false,
+                isProd: (window.location.hostname == 'www.kartable.fr'),
+                timeServer: {"url":"https:\/\/time.kartable.fr"},
+                assetsBaseUrl: 'https://assets.kartable.fr/20161216153757',
+                adwords_id: 876151301
+            };
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+        <script src="https://assets.kartable.fr/20161216153757/js/9c9cc35.js?1481899149"></script>
+        <script src="/js/routing?callback=fos.Router.setData"></script>
+            <script type="text/javascript">
+    $(document).ready(function() {
+        withMixpanel(function() {
+            function getQueryParam(url, param) {
+                // Expects a raw URL
+                param = param.replace(/[[]/, "\[").replace(/[]]/, "\]");
+                var regexS = "[\?&]" + param + "=([^&#]*)",
+                        regex = new RegExp( regexS ),
+                        results = regex.exec(url);
+                if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+                    return '';
+                } else {
+                    return decodeURIComponent(results[1]).replace(/\W/gi, ' ');
+                }
+            }
+            MixpanelWrapper.init("https://mixpanel.kartable.fr", {"superProperties":{},"peopleProperties":{},"isMixpanelUserAliased":false});
+            
+            ServerTime.now().then(function(serverTimestamp) {
+                var now = MixpanelWrapper.formatTimestampForAnalytics(serverTimestamp);
+                                var campaignKeywords = [
+                    'utm_source',
+                    'utm_medium',
+                    'utm_campaign',
+                    'utm_content',
+                    'utm_term'
+                ];
+
+                var params = {};
+                var firstParams = {};
+                var cookieParams = {};
+                var cookieUtms = getCookie('kartable_utm_params');
+                if (cookieUtms) {
+                    cookieUtms = JSON.parse(cookieUtms);
+                }
+                var index;
+                var directUtm = false;
+                for (index = 0; index < campaignKeywords.length; ++index) {
+                    var kw = getQueryParam(document.URL, campaignKeywords[index]);
+                    var kwSuperProp = null;
+                    var kwCookie = null;
+
+                    if (kw.length) {
+                        directUtm = true;
+                    } else {
+                        kwCookie = cookieUtms[campaignKeywords[index]] ? cookieUtms[campaignKeywords[index]] : null;
+                        if (kwCookie != null) {
+                            kw = kwCookie;
+                        } else {
+                            kwSuperProp = MixpanelWrapper.getProperty('Latest ' + campaignKeywords[index]);
+                            kw = kwSuperProp != null ? kwSuperProp : '';
+                        }
+                    }
+
+                    if (kw.length) {
+                        params['Latest ' + campaignKeywords[index]] = kw;
+                        firstParams[campaignKeywords[index]] = kw;
+                        cookieParams[campaignKeywords[index]] = kw;
+                    }
+                }
+
+                var campaign = 'utm_campaign';
+                if (typeof firstParams[campaign] != 'undefined') {
+                    MixpanelWrapper.arrayUnionProperty('Lifetime unique ' + campaign, firstParams[campaign]);
+                }
+                var source = 'utm_source';
+                if (typeof firstParams[source] != 'undefined') {
+                    if (directUtm) {
+                                                cookieParams['date'] = now;
+                        addUTMCookie(JSON.stringify(cookieParams));
+                        MixpanelWrapper.setOnceProperties({'First utm_date': now});
+                        MixpanelWrapper.registerProperties({'Latest utm_date': now});
+                    } else {
+                                                if (cookieUtms['date']) {
+                            MixpanelWrapper.setOnceProperties({'First utm_date': cookieUtms['date']});
+                            MixpanelWrapper.registerProperties({'Latest utm_date': cookieUtms['date']});
+                        }
+                    }
+                }
+                MixpanelWrapper.registerProperties(params);
+                MixpanelWrapper.setOnceProperties(firstParams);
+
+                                var lastVisit = MixpanelWrapper.getProperty('Latest visit date', 'super');
+                var diffInMin = null;
+                if (lastVisit != null) {
+                    var lastVisitTs = Date.parse(lastVisit);
+                    diffInMin = ((serverTimestamp - lastVisitTs) / 1000) / 60;
+                }
+                MixpanelWrapper.setOnceProperties({'First visit date': now});
+                MixpanelWrapper.registerProperties({'Latest visit date': now});
+
+                                if (diffInMin == null || diffInMin > 30) {
+                    MixpanelWrapper.incrementProperty('Lifetime number of visits');
+                    MixpanelWrapper.flushHullPeopleData(null);
+                    MixpanelWrapper.trackProperties('Visit Kartable');
+                } else {
+                                        MixpanelWrapper.flushKartableData();
+                }
+
+                                var firstVisit = MixpanelWrapper.getProperty('First visit date');
+                var _abtasty = window._abtasty || [];
+                var value = 'false';
+                if (firstVisit == null || new Date(firstVisit) > new Date('2016-11-23')) {
+                    value = 'true';
+                }
+                _abtasty.push(["cv", "First connection after 2016-11-23", value]);
+            });
+
+            MixpanelWrapper.trackProperties('Page view');
+        });
+    });
+</script>    
+    
+    <script type="text/javascript">
+        function changeCurrentLevel(value) {
+                        changeCurrentSchoolYear(null, value);
+        }
+        function changeCurrentSchoolYear(schoolYearName, levelSlug) {
+            var $schoolYearForm = $('#school_year_form');
+            if ($schoolYearForm.length == 0) {
+                                window.location.href = Routing.generate('courses_by_level', {'levelSlug': levelSlug});
+            } else {
+                $schoolYearForm.attr('action', Routing.generate('change_current_schoolyear'));
+
+                if (levelSlug != undefined) {
+                    $schoolYearForm.find('input[name*="[levelSlug]"]').val(levelSlug);
+                }
+                if (schoolYearName != undefined) {
+                    $schoolYearForm.find('input[name*="[schoolYearName]"]').val(schoolYearName);
+                }
+
+                $schoolYearForm.submit();
+            }
+        }
+    </script>
+        <script type="text/javascript" src="https://assets.kartable.fr/20161216153757/js/e912e44.js?1481899149"></script>
+    
+    <script type="text/javascript" src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/js/popoverFunction.js?1481899149"></script>
+
+            <script type="text/javascript" src="https://assets.kartable.fr/20161216153757/bundles/kartablenotification/js/notifications.js?1481899149"></script>
+    
+    <script type="text/javascript" src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/js/cookies.js?1481899149"></script>
+
+        
+            <script type="text/javascript">
+            // Load the SDK asynchronously
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            window.fbAsyncInit = function () {
+                // init the FB JS SDK
+                FB.init({
+                    appId: '187925671359706',
+                    cookie: true,
+                    xfbml: true,
+                    version: 'v2.2'
+                });
+            };
+        </script>
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq)return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window,
+                    document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '589369944583127');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=589369944583127&ev=PageView&noscript=1"/></noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+            <script src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/js/jquery.ultimate-smartbanner.js?1481899149"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on('click', '.sb-close', function () {
+                $(this).closest('#smartbanner').remove();
+            });
+        });
+
+        $.smartbanner({
+            title: 'Kartable',
+            author: 'Kartable',
+            price: 'Gratuit',
+            icon: 'https://assets.kartable.fr/20161216153757/bundles/kartablecore/icons/app-icon.png?1481899149',
+            button: 'Installer',
+            appStoreLanguage: 'fr',
+
+            daysHidden: 0,
+            daysReminder: 0
+        });
+
+        (function () {
+            var cookieName = 'kartable_hide_application_push';
+            if (getCookie(cookieName) == 'true') {
+                return;
+            }
+
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                if (confirm('Téléchargez l\'application mobile de Kartable et profitez de tous les contenus illimités directement sur votre téléphone ou tablette.')) {
+                    window.location = 'https://play.google.com/store/apps/details?id=com.kartable.android&hl=fr'
+                }
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                if (confirm('Téléchargez l\'application mobile de Kartable et profitez de tous les contenus illimités directement sur votre téléphone ou tablette.')) {
+                    window.location = 'https://itunes.apple.com/fr/app/kartable/id825500330?mt=8'
+                }
+            }
+
+            addFlagCookie(cookieName);
+        })();
+    </script>
+
+    <script>
+        var userChoiceType = $('#userChoiceType').find('a.active').data('value');
+
+        $.get(Routing.generate('fos_user_registration_register'))
+        .done(function(data) {
+            $('#quickSignUp').find('.container_form').html(data);
+            var button = $('#quickSignUp .container_form').find('#preRegister').detach();
+            var inputEmail = $('#quickSignUp .container_form').find('.form_row').html();
+            $('#quickSignUp .container_form').find('.form_row').html('<div class="form_collapse">'+inputEmail+'</div>');
+            $('#quickSignUp .container_form').find('.form_row .form_collapse input').after(button);
+            if (userChoiceType == 'TEACHER') {
+                $('#kartable_pre_registred_user_email').attr('placeholder', 'prenom.nom@ac-academie.fr');
+            } else if (userChoiceType == 'OTHER') {
+                if ($('#userChoiceType').find('a.active').text() == "Parent") {
+                    $('#kartable_pre_registred_user_email').attr('placeholder', 'Adresse email parent');
+                }
+            }
+            selectAccountType(userChoiceType);
+        })
+        .fail(function(err) {
+            console.error(err);
+        });
+
+        function selectAccountType(userChoiceType) {
+            $('select[name="kartable_pre_registred_user[pageTab]"]').val(''+userChoiceType+'');
+        }
+    </script>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = jsConfig.adwords_id;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""
+             src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/876151301/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+<script type="text/javascript">
+    (function() {
+        var isChrome = !!window.chrome && !!window.chrome.webstore;
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+        var isSafari = navigator.userAgent.indexOf("Safari") > -1;
+        var isEdge = /Edge/.test(navigator.userAgent);
+        var browserCompatible = isChrome || isFirefox || isSafari || isEdge;
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf ( "MSIE " );
+
+        if (msie > 0 || browserCompatible != true && !is_mobile) {
+            $('#browserRequired').show();
+        }
+    }());
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ac43cf72ab","applicationID":"10214785","transactionName":"ZVcDZBZQWUdTU0ANXFwdIFMQWFhaHVhbCVZCUwZV","queueTime":0,"applicationTime":65,"atts":"SRAAEl5KSkk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+
+
+</body></html>

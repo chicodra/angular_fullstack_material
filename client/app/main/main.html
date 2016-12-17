@@ -3,7 +3,7 @@
 
 <div class="container">
     <div  class="list" hide show-gt-md show-md>
-  
+
       <ul layout="row"  layout-align="center strech" layout-padding ="5">
           <li>
               <md-button ng-href="/eleve">Elèves</md-button>
@@ -18,7 +18,7 @@
               <md-button ng-href="/professeur" >Professeur particulier</md-button>
           </li>
       </ul>
-    
+
     </div>
     <div layout="column" layout-align="center center" style="padding:40px" ng-cloak hide show-sm show-xs>
     <div layout="column" layout-align="center center">
@@ -80,11 +80,11 @@
               <md-button class='md-raised' ng-href="/sixieme">6</md-button>
                <md-button class='md-raised' ng-href="/sixieme">6</md-button>
                 <md-button class='md-raised' ng-href="/sixieme">6</md-button>
-    
+
           </div>
         </md-card-content>
     </md-card>
-    
+
      <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
         <md-card-title>
           <md-card-title-text>
@@ -97,8 +97,8 @@
                     <label>Client Email</label>
                     <input required type="email" name="clientEmail" ng-model="project.clientEmail"
                         minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-                          
-                        
+
+
 
                     <div ng-messages="projectForm.clientEmail.$error" role="alert">
                     <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
@@ -113,7 +113,7 @@
             </div>
         </md-card-content>
     </md-card>
-    
+
     </div>
     <div class="inter">
         <section class="catalog" layout layout-wrap layout-align="center">
@@ -132,12 +132,12 @@
                 Accédez rapidement à tous les cours depuis une interface claire. Tout est complet et parfaitement structuré.
             </p>
             <p>
-                <h2> Je m’entraîne  </h2> 
+                <h2> Je m’entraîne  </h2>
                 Assimilez toutes les notions des programmes à l’aide de 50 000 exercices corrigés. Plus aucune surprise lors des contrôles.
 
             </p>
             <p>
-                <h2> Je m’évalue </h2> 
+                <h2> Je m’évalue </h2>
                 Validez vos acquis et découvrez votre classement par rapport aux autres élèves. Un seul objectif : récolter le plus de badges possibles.
             </p>
         </div>
@@ -157,5 +157,5 @@
 
 
 
-  
+
 
