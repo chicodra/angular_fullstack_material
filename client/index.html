@@ -23,6 +23,8 @@
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="components/footer/footer.css">
+      <link rel="stylesheet" href="components/navbar/navbar.css">
       <!-- endinjector -->
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
@@ -33,7 +35,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-view=""></div>
+    <div ng-view="">
+      
+    </div>
+    
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -80,9 +85,13 @@
           <script src="app/admin/admin.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/navbar/navbar.directive.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
+          <script src="components/footer/footer.directive.js"></script>
           <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+          <script src="components/navbar/navbar.controller.js"></script>
+          <script src="components/navbar/navbar.directive.js"></script>
           <script src="components/shell/App.controller.js"></script>
           <script src="components/shell/dialog/dialog.controller.js"></script>
           <script src="components/shell/product.controller.js"></script>
