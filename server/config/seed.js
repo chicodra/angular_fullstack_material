@@ -10,7 +10,7 @@ var User = require('../api/user/user.model');
 var Classe = require('../api/classe/classe.model');
 var Role = require('../api/role/role.model');
 var Mat = require('../api/matiere/matiere.model');
-var Chapitre = require('../api/chapitre/chapitre.model');
+var Cours = require('../api/cours/cours.model');
 
 
 Thing.find({}).remove(function () {
@@ -168,44 +168,49 @@ Mat.find({}).remove(function () {
   );
 });
 
-Chapitre.find({}).remove(function () {
-  Chapitre.create({
-    libelle: "Classe_grammaire d'un mot",
-    numero: "Chapitre 1",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec",
-    contenu: "../assets/guide_cahier_charge.pdf"
-  }, {
-    libelle: "Fonction_grammaire d'un mot",
-    numero: "Chapitre 2",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
-    }, {
-    libelle: "Le Verbe",
-    numero: "Chapitre 3",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
-    },
-    {
-    libelle: "Les determinants",
-    numero: "Chapitre 4",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
-    },
-    {
-    libelle: "Les Nombres Entiers",
-    numero: "Chapitre 1",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ee"
-    },
-    {
-    libelle: "Les Fractions",
-    numero: "Chapitre 2",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ee"
-    },
+Cours.find({}).remove(function () {
+  Cours.create({
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ec",
+  coeff: 4
+  },
+  {
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ed",
+  coeff: 2
+  },
+  {
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ee",
+  coeff: 4
+  },
+  {
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ef",
+  coeff: 2
+  },
+  {
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ec",
+  coeff: 4
+  },
+  {
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ed",
+  coeff: 2
+  },
+  {
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ee",
+  coeff: 4
+  },
+  {
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ef",
+  coeff: 2
+  },
     function () {
-      console.log('finished populating Classes');
+      console.log('finished populating Cours');
     }
   );
 });

@@ -1,13 +1,12 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./chapitre.controller');
+var controller = require('./cours.controller');
 
 var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
-router.get('/matiere/:id&:ids', controller.getByMat);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);

@@ -4,21 +4,21 @@
 
 'use strict';
 
-var Chapitre = require('./chapitre.model');
+var Cours = require('./cours.model');
 
 exports.register = function(socket) {
-  Chapitre.schema.post('save', function (doc) {
+  Cours.schema.post('save', function (doc) {
     onSave(socket, doc);
   });
-  Chapitre.schema.post('remove', function (doc) {
+  Cours.schema.post('remove', function (doc) {
     onRemove(socket, doc);
   });
 }
 
 function onSave(socket, doc, cb) {
-  socket.emit('chapitre:save', doc);
+  socket.emit('cours:save', doc);
 }
 
 function onRemove(socket, doc, cb) {
-  socket.emit('chapitre:remove', doc);
+  socket.emit('cours:remove', doc);
 }
