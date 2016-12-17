@@ -11,6 +11,7 @@ exports.index = function(req, res) {
   });
 };
 
+
 // Get a single classe
 exports.show = function(req, res) {
   Classe.findById(req.params.id, function (err, classe) {
@@ -19,6 +20,7 @@ exports.show = function(req, res) {
     return res.json(classe);
   });
 };
+
 
 // Creates a new classe in the DB.
 exports.create = function(req, res) {

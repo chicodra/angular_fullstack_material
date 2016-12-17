@@ -173,7 +173,8 @@ Chapitre.find({}).remove(function () {
     libelle: "Classe_grammaire d'un mot",
     numero: "Chapitre 1",
     classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
+    matiere: "58552e68ea9bec3c14a927ec",
+    contenu: "../assets/guide_cahier_charge.pdf"
   }, {
     libelle: "Fonction_grammaire d'un mot",
     numero: "Chapitre 2",

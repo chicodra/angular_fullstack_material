@@ -19,6 +19,13 @@ exports.show = function(req, res) {
     return res.json(chapitre);
   });
 };
+exports.showContenu = function(req, res) {
+  Chapitre.findById(req.params.id, function (err, chapitre) {
+    if(err) { return handleError(res, err); }
+    if(!chapitre) { return res.status(404).send('Not Found'); }
+    return res.json(chapitre.contenu);
+  });
+};
 
 //Get Chapitre By matiere and Classe
 exports.getByMat = function(req, res) {
