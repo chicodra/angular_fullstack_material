@@ -8,6 +8,7 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Classe = require('../api/classe/classe.model');
+var Role = require('../api/role/role.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -89,6 +90,20 @@ Classe.find({}).remove(function() {
     abrev: 'Tle L2',
   annee_academ: '2016/2017'
   }, function() {
+      console.log('finished populating Classes');
+    }
+  );
+});
+
+Role.find({}).remove(function() {
+  Role.create ({
+    name: 'Etudiant'
+  }, {
+    name: 'Professeur'
+  },{
+    name: 'Parent'
+  },
+   function() {
       console.log('finished populating Classes');
     }
   );
