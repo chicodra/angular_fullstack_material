@@ -8,10 +8,14 @@ var authTypes = ['github', 'twitter', 'facebook', 'google'];
 var UserSchema = new Schema({
   name: String,
   email: { type: String, lowercase: true },
+<<<<<<< HEAD
   classe: {
     type: Schema.ObjectId,
     ref: 'Classe'
   },
+=======
+  role : Schema.ObjectId,
+>>>>>>> 4346cea75ec707f15373a5358be4124893e2036f
   hashedPassword: String,
   provider: String,
   salt: String,
