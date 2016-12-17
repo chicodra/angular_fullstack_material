@@ -20,6 +20,13 @@ exports.index = function(req, res) {
   });
 };
 
+exports.ind = function(req, res) {
+  User.find(function (err, users) {
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(users);
+  });
+};
+
 /**
  * Creates a new user
  */
