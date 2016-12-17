@@ -20,6 +20,14 @@ exports.show = function(req, res) {
   });
 };
 
+//Get Chapitre By matiere and Classe
+exports.getByMat = function(req, res) {
+  Chapitre.find({matiere:req.params.id,classe:req.params.ids}, function (err, chapitres) {
+    if(err) return res.status(500).send(err);
+    res.status(200).json(chapitres);
+  });
+};
+
 // Creates a new chapitre in the DB.
 exports.create = function(req, res) {
   Chapitre.create(req.body, function(err, chapitre) {

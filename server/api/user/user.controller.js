@@ -25,6 +25,8 @@ exports.ind = function(req, res) {
     res.status(200).json(users);
   });
 };
+
+//Get user by role
 exports.getByRole = function(req, res) {
   User.find({role:req.params.id}, function (err, users) {
     if(err) return res.status(500).send(err);

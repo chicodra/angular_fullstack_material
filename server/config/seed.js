@@ -10,6 +10,7 @@ var User = require('../api/user/user.model');
 var Classe = require('../api/classe/classe.model');
 var Role = require('../api/role/role.model');
 var Mat = require('../api/matiere/matiere.model');
+var Chapitre = require('../api/chapitre/chapitre.model');
 
 
 Thing.find({}).remove(function () {
@@ -164,6 +165,47 @@ Mat.find({}).remove(function () {
     _id: "58552e68ea9bec3c14a927f1",
     libelle: 'Geographie'
   }
+  );
+});
+
+Chapitre.find({}).remove(function () {
+  Chapitre.create({
+    libelle: "Classe_grammaire d'un mot",
+    numero: "Chapitre 1",
+    classe: "58552a28ccf48ad00680f688",
+    matiere: "58552e68ea9bec3c14a927ec"
+  }, {
+    libelle: "Fonction_grammaire d'un mot",
+    numero: "Chapitre 2",
+    classe: "58552a28ccf48ad00680f688",
+    matiere: "58552e68ea9bec3c14a927ec"
+    }, {
+    libelle: "Le Verbe",
+    numero: "Chapitre 3",
+    classe: "58552a28ccf48ad00680f688",
+    matiere: "58552e68ea9bec3c14a927ec"
+    },
+    {
+    libelle: "Les determinants",
+    numero: "Chapitre 4",
+    classe: "58552a28ccf48ad00680f688",
+    matiere: "58552e68ea9bec3c14a927ec"
+    },
+    {
+    libelle: "Les Nombres Entiers",
+    numero: "Chapitre 1",
+    classe: "58552a28ccf48ad00680f688",
+    matiere: "58552e68ea9bec3c14a927ee"
+    },
+    {
+    libelle: "Les Fractions",
+    numero: "Chapitre 2",
+    classe: "58552a28ccf48ad00680f688",
+    matiere: "58552e68ea9bec3c14a927ee"
+    },
+    function () {
+      console.log('finished populating Classes');
+    }
   );
 });
 
