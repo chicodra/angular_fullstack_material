@@ -19,6 +19,20 @@ exports.index = function(req, res) {
     res.status(200).json(users);
   });
 };
+exports.ind = function(req, res) {
+  User.find({}, '-salt -hashedPassword', function (err, users) {
+    if(err) return res.status(500).send(err);
+    res.status(200).json(users);
+  });
+};
+
+//Get user by role
+exports.getByRole = function(req, res) {
+  User.find({role:req.params.id}, function (err, users) {
+    if(err) return res.status(500).send(err);
+    res.status(200).json(users);
+  });
+};
 
 /**
  * Creates a new user
@@ -26,7 +40,6 @@ exports.index = function(req, res) {
 exports.create = function (req, res, next) {
   var newUser = new User(req.body);
   newUser.provider = 'local';
-  newUser.role = 'user';
   newUser.save(function(err, user) {
     if (err) return validationError(res, err);
     var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
@@ -46,6 +59,7 @@ exports.show = function (req, res, next) {
     res.json(user.profile);
   });
 };
+
 
 /**
  * Deletes a user
