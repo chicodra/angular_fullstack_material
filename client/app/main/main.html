@@ -32,9 +32,7 @@
             </ul>
         </div>
     </div>
-         <h1 align="center">
-            Boostez vos notes comme 1 million d’élèves.
-        </h1>
+        
     </div>
 
         <!--<div class="selectionLevels not_mobile">
@@ -71,53 +69,57 @@
                     </div>
         </div>-->
 
-    <div layout="row" layout-align="center center">
-    <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch  layout-align="center center">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Découvrez Kartable avant de vous inscrire</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content layout="row" layout-align="space-between">
-          <div class="md-media-xl card-media">
-            <md-button class='md-raised' ng-href="/sixieme">6</md-button>
-             <md-button class='md-raised' ng-href="/sixieme">6</md-button>
-              <md-button class='md-raised' ng-href="/sixieme">6</md-button>
-               <md-button class='md-raised' ng-href="/sixieme">6</md-button>
-                <md-button class='md-raised' ng-href="/sixieme">6</md-button>
-    
-          </div>
-        </md-card-content>
-    </md-card>
-    
-     <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Accédez gratuitement aux cours</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-            <div layout="row" >
-                <md-input-container >
-                    <label>Client Email</label>
-                    <input required type="email" name="clientEmail" ng-model="project.clientEmail"
-                        minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-                          
-                        
+     <div layout="column" layout-align="center center">
+    <h1>
+      Boostez vos notes comme 1 million d’élèves.
+    </h1>
+    <div layout="row" layout-align="center start">
+    <md-card flex="35" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch  layout-align="center center">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Découvrez Kartable avant de vous inscrire</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content layout="row" layout-align="space-between center">
+        <div layout-align="center center">
 
-                    <div ng-messages="projectForm.clientEmail.$error" role="alert">
-                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                        Your email must be between 10 and 100 characters long and look like an e-mail address.
-                    </div>
-                    </div>
-                </md-input-container><md-button class="md-raised md-warn">s'inscrire</md-button>
+          <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="{{classe.libelle}}">{{classe.abrev}}</md-button>
 
-            </div>
-            <div >
-                <p><md-button class="md-raised md-primary">s'inscrire avec facebook</md-button></p>
-            </div>
-        </md-card-content>
+        </div>
+      </md-card-content>
     </md-card>
+
+    <md-card flex="40" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Accédez gratuitement aux cours</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <div layout="row" >
+          <md-input-container >
+            <label>Client Email</label>
+            <input required type="email" name="clientEmail" ng-model="project.clientEmail"
+                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+
+
+            <div ng-messages="projectForm.clientEmail.$error" role="alert">
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                Your email must be between 10 and 100 characters long and look like an e-mail address.
+              </div>
+            </div>
+          </md-input-container><md-button class="md-raised md-warn">s'inscrire</md-button>
+
+        </div>
+        <div >
+          <p><md-button class="md-raised md-primary">s'inscrire avec facebook</md-button></p>
+        </div>
+      </md-card-content>
+    </md-card>
+
+  </div>
+  </div>
     
     </div>
     <div class="inter">
