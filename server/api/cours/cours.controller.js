@@ -2,12 +2,20 @@
 
 var _ = require('lodash');
 var Cours = require('./cours.model');
+var Mat = require('../matiere/matiere.model')
 
 // Get list of courss
 exports.index = function(req, res) {
   Cours.find(function (err, courss) {
     if(err) { return handleError(res, err); }
     return res.status(200).json(courss);
+  });
+};
+
+exports.getClasseByCours = function(req, res) {
+  Cours.find({classe : req.params.id},function (err, courss) {
+    if(err) { return handleError(res, err); }
+       return res.status(200).json(courss);
   });
 };
 
