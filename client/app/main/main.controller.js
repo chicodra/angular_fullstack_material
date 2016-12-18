@@ -37,6 +37,8 @@ angular.module('appChicoApp')
 
       //-------------------------------------------
 
+  
+
     $scope.getColor = function($index) {
       var _d = ($index + 1) % 11;
       var bg = '';
