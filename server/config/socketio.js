@@ -18,6 +18,10 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/chapitre/chapitre.socket').register(socket);
+  require('../api/matiere/matiere.socket').register(socket);
+  require('../api/role/role.socket').register(socket);
+  require('../api/classe/classe.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
 
