@@ -10,7 +10,7 @@ ul li{
   background-color: #999999; 
   }*/
   .inter{
-background-color: yellow
+    background-color: yellow
   }
   .inter img{
     width:50%;
@@ -26,3 +26,67 @@ background-color: yellow
   .container {
    margin-top: 80px;
   }
+
+  #bt {
+    display: inline-block;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  #bt:hover {
+    border-bottom: solid white 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #select {
+    border: solid white 1px;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  #dropdown {
+    margin: 0;
+    padding: 0;
+  }
+
+  #dropdown a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+  }
+
+  #dropdown a:hover {
+    color: gray;
+  }
+
+  #dropdown li {
+    list-style: none;
+    border-radius: 35px;
+  }
+
+  #dropdown li:not(.active) {
+    display: none;
+  }
+
+  #dropdown li.active a {
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    border: solid white 2px;
+    border-radius: 35px;
+    padding: 8;
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+
+
+  }
+  #dropdown li.active:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #dropdown li.active:cli {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
