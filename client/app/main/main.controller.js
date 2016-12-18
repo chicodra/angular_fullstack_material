@@ -9,11 +9,6 @@ angular.module('appChicoApp')
       socket.syncUpdates('thing', $scope.awesomeThings);
     });
     $scope.currentNavItem = 'page1';
-    $http.get('/api/classes').then(function(listClasse) {
-      $scope.listClasse = listClasse.data
-      console.log("data", listClasse.data);
-    });
-
 
 
     //---------------
