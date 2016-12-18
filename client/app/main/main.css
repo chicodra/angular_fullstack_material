@@ -7,7 +7,7 @@ ul li{
 
 
 /*.carddemoBasicUsage .card-media {
-  background-color: #999999; 
+  background-color: #999999;
   }*/
   .inter{
     background-color: yellow
@@ -20,12 +20,13 @@ ul li{
     font-size: 50px;
     text-align: center;
     color: red;
-    
+
   }
 
   .container {
    margin-top: 80px;
   }
+<<<<<<< HEAD
 
   #bt {
     display: inline-block;
@@ -90,3 +91,5 @@ ul li{
     background-color: rgba(0, 0, 0, 0.3);
   }
 
+=======
+>>>>>>> 324101d418c58d1481076f5c5b9201578bb9bb3e
