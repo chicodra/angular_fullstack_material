@@ -37,9 +37,8 @@ angular.module('appChicoApp')
 
       //-------------------------------------------
 
-  
 
-    $scope.getColor = function($index) {
+      $scope.getColor = function($index) {
       var _d = ($index + 1) % 11;
       var bg = '';
 
@@ -82,3 +81,9 @@ angular.module('appChicoApp')
   $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
   $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
 });
+
+function display() {
+    //var now = angular.element(dropdown);;
+    var ok = document.querySelectorAll('#dropdown li:not(.active)');
+    console.log(ok)
+}

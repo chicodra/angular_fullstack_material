@@ -8,4 +8,3 @@ angular.module('appChicoApp')
         controller: 'MainCtrl'
       });
   });
-

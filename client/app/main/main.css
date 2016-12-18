@@ -2,15 +2,14 @@ ul li{
   list-style: none;
 }
 .list{
-  background-color: transparent
+  
 }
-
 
 /*.carddemoBasicUsage .card-media {
   background-color: #999999; 
   }*/
   .inter{
-    background-color: yellow
+    
   }
   .inter img{
     width:50%;
@@ -23,8 +22,14 @@ ul li{
     
   }
 
-  .container {
-   margin-top: 80px;
+  .navbar2 {
+    background-color: #97D5F5;
+    margin-top: 80px;
+  }
+
+  .fixe {
+    border-bottom: solid white 1px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   #bt {
