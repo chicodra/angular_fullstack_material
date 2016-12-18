@@ -11,7 +11,7 @@ var Classe = require('../api/classe/classe.model');
 var Role = require('../api/role/role.model');
 var Mat = require('../api/matiere/matiere.model');
 var Cours = require('../api/cours/cours.model');
-
+var Chap = require('../api/chapitre/chapitre.model');
 
 Thing.find({}).remove(function () {
   Thing.create({
@@ -128,6 +128,43 @@ Role.find({}).remove(function () {
   );
 });
 
+Chap.find({}).remove(function () {
+  Chap.create({
+  name: "Les Fonctions",
+  numero: "Chap1",
+  cours: "58552e68ea9bec3c14a927ee",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Fractions",
+  numero: "Chap2",
+  cours: "58552e68ea9bec3c14a927ee",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Nombres Entiers",
+  numero: "Chap3",
+  cours: "58552e68ea9bec3c14a927ee",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Adjectifs",
+  numero: "Chap1",
+  cours: "58552e68ea9bec3c14a927ec",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Déterminants",
+  numero: "Chap1",
+  cours: "58552e68ea9bec3c14a927ec",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+    function () {
+      console.log('finished populating Classes');
+    }
+  );
+});
+
 Mat.find({}).remove(function () {
   Mat.create({
     _id: "58552e68ea9bec3c14a927ec",
@@ -170,41 +207,49 @@ Mat.find({}).remove(function () {
 
 Cours.find({}).remove(function () {
   Cours.create({
+  _id: "58565772fa9ee307100d8d70",
   classe: "58552a28ccf48ad00680f688",
   matiere: "58552e68ea9bec3c14a927ec",
   coeff: 4
   },
   {
+  _id: "58565772fa9ee307100d8d72",
   classe: "58552a28ccf48ad00680f688",
   matiere: "58552e68ea9bec3c14a927ed",
   coeff: 2
   },
   {
+  _id: "58565772fa9ee307100d8d74",
   classe: "58552a28ccf48ad00680f688",
   matiere: "58552e68ea9bec3c14a927ee",
   coeff: 4
   },
   {
+  _id: "58565772fa9ee307100d8d77",
   classe: "58552a28ccf48ad00680f688",
   matiere: "58552e68ea9bec3c14a927ef",
   coeff: 2
   },
   {
+  _id: "58565772fa9ee307100d8d75",
   classe: "58552a28ccf48ad00680f689",
   matiere: "58552e68ea9bec3c14a927ec",
   coeff: 4
   },
   {
+  _id: "58565772fa9ee307100d8d71",
   classe: "58552a28ccf48ad00680f689",
   matiere: "58552e68ea9bec3c14a927ed",
   coeff: 2
   },
   {
+  _id: "58565772fa9ee307100d8d76",
   classe: "58552a28ccf48ad00680f689",
   matiere: "58552e68ea9bec3c14a927ee",
   coeff: 4
   },
   {
+  _id: "58565772fa9ee307100d8d73",
   classe: "58552a28ccf48ad00680f689",
   matiere: "58552e68ea9bec3c14a927ef",
   coeff: 2
