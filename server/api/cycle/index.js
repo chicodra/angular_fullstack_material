@@ -1,14 +1,11 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./cours.controller');
+var controller = require('./cycle.controller');
 
 var router = express.Router();
 
 router.get('/', controller.index);
-
-// pour avoir les matieres par classe
-router.get('/classe/:id', controller.getClasseByCours);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
 router.put('/:id', controller.update);

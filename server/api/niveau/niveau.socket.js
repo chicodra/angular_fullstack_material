@@ -4,21 +4,21 @@
 
 'use strict';
 
-var Cours = require('./cours.model');
+var Niveau = require('./niveau.model');
 
 exports.register = function(socket) {
-  Cours.schema.post('save', function (doc) {
+  Niveau.schema.post('save', function (doc) {
     onSave(socket, doc);
   });
-  Cours.schema.post('remove', function (doc) {
+  Niveau.schema.post('remove', function (doc) {
     onRemove(socket, doc);
   });
 }
 
 function onSave(socket, doc, cb) {
-  socket.emit('cours:save', doc);
+  socket.emit('niveau:save', doc);
 }
 
 function onRemove(socket, doc, cb) {
-  socket.emit('cours:remove', doc);
+  socket.emit('niveau:remove', doc);
 }

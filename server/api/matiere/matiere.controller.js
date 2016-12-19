@@ -11,7 +11,6 @@ exports.index = function(req, res) {
   });
 };
 
-
 // Get a single matiere
 exports.show = function(req, res) {
   Matiere.findById(req.params.id, function (err, matiere) {
