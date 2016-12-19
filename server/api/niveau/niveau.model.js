@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
 
 var NiveauSchema = new Schema({
   label: String,
+  abrv: String,
   cycle:{
         type: Schema.Types.ObjectId, ref: 'Cycle' 
     },
