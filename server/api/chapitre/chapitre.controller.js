@@ -11,6 +11,18 @@ exports.index = function(req, res) {
   });
 };
 
+//get Chapitres by Matieres
+
+exports.getChapitreByMatieres = function (req, res) { 
+  Chapitre.find({ matiere: req.params.id}, function(err, chapitres){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(chapitres);
+    }
+  });
+  
+};
+
 // Get a single chapitre
 exports.show = function(req, res) {
   Chapitre.findById(req.params.id, function (err, chapitre) {

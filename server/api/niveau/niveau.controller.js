@@ -20,6 +20,18 @@ exports.show = function(req, res) {
   });
 };
 
+//Get Niveau by Cycle
+
+exports.getNiveauByCycle = function (req, res) { 
+  Niveau.find({ cycle: req.params.id}, function(err, niveaux){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(niveaux);
+    }
+  });
+  
+};
+
 // Creates a new niveau in the DB.
 exports.create = function(req, res) {
   Niveau.create(req.body, function(err, niveau) {

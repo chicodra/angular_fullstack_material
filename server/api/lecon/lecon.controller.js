@@ -20,6 +20,18 @@ exports.show = function(req, res) {
   });
 };
 
+//get Leçons by chapitre
+
+exports.getLeconByChapitre = function (req, res) { 
+  Lecon.find({ chapitre: req.params.id}, function(err, lecons){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(lecons);
+    }
+  });
+  
+};
+
 // Creates a new lecon in the DB.
 exports.create = function(req, res) {
   Lecon.create(req.body, function(err, lecon) {
