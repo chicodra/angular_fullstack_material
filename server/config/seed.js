@@ -8,10 +8,9 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Classe = require('../api/classe/classe.model');
-var Role = require('../api/role/role.model');
 var Mat = require('../api/matiere/matiere.model');
-var Chapitre = require('../api/chapitre/chapitre.model');
-
+var Cours = require('../api/cours/cours.model');
+var Chap = require('../api/chapitre/chapitre.model');
 
 Thing.find({}).remove(function () {
   Thing.create({
@@ -112,16 +111,38 @@ Classe.find({}).remove(function () {
   );
 });
 
-Role.find({}).remove(function () {
-  Role.create({
-    _id: '58552073a0b74220231120ce',
 
-    name: 'Etudiant'
-  }, {
-      name: 'Professeur'
-    }, {
-      name: 'Parent'
-    },
+Chap.find({}).remove(function () {
+  Chap.create({
+  name: "Les Fonctions",
+  numero: "Chap1",
+  cours: "58552e68ea9bec3c14a927ee",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Fractions",
+  numero: "Chap2",
+  cours: "58552e68ea9bec3c14a927ee",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Nombres Entiers",
+  numero: "Chap3",
+  cours: "58552e68ea9bec3c14a927ee",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Adjectifs",
+  numero: "Chap1",
+  cours: "58552e68ea9bec3c14a927ec",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
+{
+  name: "Les Déterminants",
+  numero: "Chap1",
+  cours: "58552e68ea9bec3c14a927ec",
+  contenue: "../assets/guide_cahier_charge.pdf"                           
+},
     function () {
       console.log('finished populating Classes');
     }
@@ -168,44 +189,57 @@ Mat.find({}).remove(function () {
   );
 });
 
-Chapitre.find({}).remove(function () {
-  Chapitre.create({
-    libelle: "Classe_grammaire d'un mot",
-    numero: "Chapitre 1",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec",
-    contenu: "../assets/guide_cahier_charge.pdf"
-  }, {
-    libelle: "Fonction_grammaire d'un mot",
-    numero: "Chapitre 2",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
-    }, {
-    libelle: "Le Verbe",
-    numero: "Chapitre 3",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
-    },
-    {
-    libelle: "Les determinants",
-    numero: "Chapitre 4",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ec"
-    },
-    {
-    libelle: "Les Nombres Entiers",
-    numero: "Chapitre 1",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ee"
-    },
-    {
-    libelle: "Les Fractions",
-    numero: "Chapitre 2",
-    classe: "58552a28ccf48ad00680f688",
-    matiere: "58552e68ea9bec3c14a927ee"
-    },
+Cours.find({}).remove(function () {
+  Cours.create({
+  _id: "58565772fa9ee307100d8d70",
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ec",
+  coeff: 4
+  },
+  {
+  _id: "58565772fa9ee307100d8d72",
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ed",
+  coeff: 2
+  },
+  {
+  _id: "58565772fa9ee307100d8d74",
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ee",
+  coeff: 4
+  },
+  {
+  _id: "58565772fa9ee307100d8d77",
+  classe: "58552a28ccf48ad00680f688",
+  matiere: "58552e68ea9bec3c14a927ef",
+  coeff: 2
+  },
+  {
+  _id: "58565772fa9ee307100d8d75",
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ec",
+  coeff: 4
+  },
+  {
+  _id: "58565772fa9ee307100d8d71",
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ed",
+  coeff: 2
+  },
+  {
+  _id: "58565772fa9ee307100d8d76",
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ee",
+  coeff: 4
+  },
+  {
+  _id: "58565772fa9ee307100d8d73",
+  classe: "58552a28ccf48ad00680f689",
+  matiere: "58552e68ea9bec3c14a927ef",
+  coeff: 2
+  },
     function () {
-      console.log('finished populating Classes');
+      console.log('finished populating Cours');
     }
   );
 });

@@ -4,11 +4,10 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var ChapitreSchema = new Schema({
-  libelle: String,
+  name: String,
   numero: String,
-  classe: Schema.ObjectId,
-  matiere: Schema.ObjectId,
-  contenu: String
+  cours: Schema.ObjectId,
+  contenue: String
 });
 
 module.exports = mongoose.model('Chapitre', ChapitreSchema);

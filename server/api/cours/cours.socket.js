@@ -4,21 +4,21 @@
 
 'use strict';
 
-var Role = require('./role.model');
+var Cours = require('./cours.model');
 
 exports.register = function(socket) {
-  Role.schema.post('save', function (doc) {
+  Cours.schema.post('save', function (doc) {
     onSave(socket, doc);
   });
-  Role.schema.post('remove', function (doc) {
+  Cours.schema.post('remove', function (doc) {
     onRemove(socket, doc);
   });
 }
 
 function onSave(socket, doc, cb) {
-  socket.emit('role:save', doc);
+  socket.emit('cours:save', doc);
 }
 
 function onRemove(socket, doc, cb) {
-  socket.emit('role:remove', doc);
+  socket.emit('cours:remove', doc);
 }
