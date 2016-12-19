@@ -8,7 +8,6 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Classe = require('../api/classe/classe.model');
-var Role = require('../api/role/role.model');
 var Mat = require('../api/matiere/matiere.model');
 var Cours = require('../api/cours/cours.model');
 var Chap = require('../api/chapitre/chapitre.model');
@@ -112,21 +111,6 @@ Classe.find({}).remove(function () {
   );
 });
 
-Role.find({}).remove(function () {
-  Role.create({
-    _id: '58552073a0b74220231120ce',
-
-    name: 'Etudiant'
-  }, {
-      name: 'Professeur'
-    }, {
-      name: 'Parent'
-    },
-    function () {
-      console.log('finished populating Classes');
-    }
-  );
-});
 
 Chap.find({}).remove(function () {
   Chap.create({
