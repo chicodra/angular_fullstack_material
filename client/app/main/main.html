@@ -34,7 +34,7 @@
 
 <div class="intro">
     <div layout="column" layout-align="center center">
-        <h1>
+        <h1 style="color: white; opacity: 0.9; margin-top: 70px; ">
             Boostez vos notes comme 1 million d’élèves.
         </h1>
         <div layout="row" layout-align="center center">
@@ -47,7 +47,7 @@
                 <md-card-content layout="row" layout-align="space-between center">
                     <div class="lesClasses" layout-align="center center">
 
-                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="{{classe.libelle}}">{{classe.abrev}}</md-button>
+                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
 
                     </div>
                 </md-card-content>

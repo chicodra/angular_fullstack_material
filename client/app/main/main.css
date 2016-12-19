@@ -20,13 +20,16 @@ ul li{
   .intro{
     margin-top: -17px;
     height: 450px;
+    margin-bottom: 50px;
   }
 
   .mdcard1{
     margin-right: -8px;
     height: 300px;
+    margin-top: 50px;
   }
   .mdcard2{
+    margin-top: 50px;
     height: 300px;
   }
 
