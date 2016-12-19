@@ -21,7 +21,14 @@ exports.getClasseByCours = function (req, res) {
   Cours.find({ classe: req.params.id })
   .populate('matiere')
   .exec(function(err,courss){
-    return res.status(200).json(courss);
+    if(err) { return handleError(res, err); }
+     var MatYi = [];
+    courss.forEach(function(benCours) {
+       
+            MatYi.push(benCours.matiere);
+       
+    });
+    return res.json(MatYi);
   })
 }
 
