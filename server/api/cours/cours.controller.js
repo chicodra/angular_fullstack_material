@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var Cours = require('./cours.model');
 var Mat = require('../matiere/matiere.model')
+var cl = require('../classe/classe.model')
 
 // Get list of courss
 exports.index = function (req, res) {
@@ -12,26 +13,17 @@ exports.index = function (req, res) {
   });
 };
 
-var khol = [];
-exports.getClasseByCours = function (req, res) {
-  Cours.find({ classe: req.params.id }, function (err, courss) {
-    if (err) { return handleError(res, err); }
-    else {
-      
-      courss.forEach(function(element) {
-        Mat.find({ _id: element.matiere }, function (err, matieres) {
-        if (err) { return handleError(res, err); }
-        else {
-          khol.push(matieres);
-  
-        }
-      });
-      }, this);
-       return res.status(200).json(khol);
-    }
+var i;
 
-  });
-};
+
+exports.getClasseByCours = function (req, res) {
+  
+  Cours.find({ classe: req.params.id })
+  .populate('matiere')
+  .exec(function(err,courss){
+    return res.status(200).json(courss);
+  })
+}
 
 // Get a single cours
 exports.show = function (req, res) {

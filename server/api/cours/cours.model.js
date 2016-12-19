@@ -5,7 +5,9 @@ var mongoose = require('mongoose'),
 
 var CoursSchema = new Schema({
     classe: Schema.ObjectId,
-    matiere: Schema.ObjectId,
+    matiere:{
+        type: Schema.Types.ObjectId, ref: 'Matiere' 
+    },
     coeff: Number
 });
 
