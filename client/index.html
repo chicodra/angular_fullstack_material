@@ -10,6 +10,16 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+      <!-- VIEWPORT [TRES IMPORTANT POUR LE RESPONSIVE DESIGN] -->
+    <meta name="viewport" content="width:device-width, initial-scale=1.0">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
@@ -25,7 +35,6 @@
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="components/footer/footer.css">
       <link rel="stylesheet" href="components/navbar/navbar.css">
-      <link rel="stylesheet" href="components/shell/header.css">
       <!-- endinjector -->
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
@@ -37,9 +46,9 @@
 
     <!-- Add your site or application content here -->
     <div ng-view="">
-
+      
     </div>
-
+    
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -59,7 +68,6 @@
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
       <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/json3/lib/json3.js"></script>
       <script src="bower_components/angular-resource/angular-resource.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -74,9 +82,9 @@
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
 
-
+        
         <!-- build:js(.tmp) app/app.js -->
-
+        
         <script src="app/app.js"></script>
           <!-- injector:js -->
           <script src="app/account/account.js"></script>

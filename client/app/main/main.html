@@ -3,32 +3,73 @@
 
 <div class="container">
     <div  class="list" hide show-gt-md show-md>
-
       <ul layout="row"  layout-align="center strech" layout-padding ="5">
           <li>
-              <md-button ng-href="/eleve">Elèves</md-button>
+              <md-button ng-href="/eleve" id="bt">Elèves</md-button>
           </li>
           <li>
-              <md-button ng-href="/parents" >Parents</md-button>
+              <md-button ng-href="/parents" id="bt">Parents</md-button>
           </li>
           <li>
-              <md-button ng-href="/enseignant" >Enseignants de l'Education Nationale</md-button>
+              <md-button ng-href="/enseignant" id="bt">Enseignants de l'Education Nationale</md-button>
           </li>
           <li>
-              <md-button ng-href="/professeur" >Professeur particulier</md-button>
+              <md-button ng-href="/professeur" id="bt">Professeur particulier</md-button>
           </li>
       </ul>
-
     </div>
     <div layout="column" layout-align="center center" style="padding:40px" ng-cloak hide show-sm show-xs>
-    <div layout="column" layout-align="center center">
-        <md-select placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
-        <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
-        </md-select>
-        <p class="md-caption">You have assigned the task to: {{ user ? user.name : 'No one yet' }}</p>
+        <div layout="column" layout-align="center center">
+            <!--<md-select id="select" placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
+            <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+            </md-select>
+            <p class="md-caption">You have assigned the task to: {{ user ? user.name : 'No one yet' }}</p>-->
+             <ul id="dropdown">
+                <li class="active"><a href="#">Elèves</a></li>
+                <li><a href="#">Parents</a></li>
+                <li><a href="#">Enseignants</a></li>
+                <li><a href="#">Professeurs</a></li>
+            </ul>
+        </div>
     </div>
+        
     </div>
-  <div layout="column" layout-align="center center">
+
+        <!--<div class="selectionLevels not_mobile">
+                    <h2>Découvrez Kartable avant de vous inscrire</h2>
+                                            <a class="level" href="/sixieme">6e</a>
+                                            <a class="level" href="/cinquieme">5e</a>
+                                            <a class="level" href="/quatrieme">4e</a>
+                                            <a class="level" href="/troisieme">3e</a>
+                                            <a class="level" href="/seconde">2nde</a>
+                                            <a class="level" href="/premiere-s">1S</a>
+                                            <a class="level" href="/premiere-es">1ES</a>
+                                            <a class="level" href="/premiere-l">1L</a>
+                                            <a class="level" href="/terminale-s">TS</a>
+                                            <a class="level" href="/terminale-es">TES</a>
+                                            <a class="level" href="/terminale-l">TL</a>
+         </div>
+
+        <div id="quickSignUp">
+                    <h2>Accédez gratuitement aux cours</h2>
+                    <div class="container_form">
+                        <form class="sign_up_form">
+                            <div class="form_row">
+                                <div class="form_collapse">
+                                    <input class="form_input" type="text" placeholder="Adresse email" />
+                                    <button type="submit" >S'inscrire</button>
+                                </div>
+                            </div>
+                             <span>
+                                    En vous inscrivant, vous autorisez Kartable à vous envoyer ses communications par email.
+                                </span>
+                        </form>
+                        <div class="form_divider">ou</div>
+                        <a class="connect_with_facebook">S'inscrire avec Facebook</a>
+                    </div>
+        </div>-->
+
+     <div layout="column" layout-align="center center">
     <h1>
       Boostez vos notes comme 1 million d’élèves.
     </h1>
@@ -79,11 +120,8 @@
 
   </div>
   </div>
-
-
-
-
-
+    
+    </div>
     <div class="inter">
         <section class="catalog" layout layout-wrap layout-align="center">
     <md-card flex="22" flex-sm="46" flex-xs="80" ng-class="{shaded:$mdMedia('xs') }">
@@ -101,12 +139,12 @@
                 Accédez rapidement à tous les cours depuis une interface claire. Tout est complet et parfaitement structuré.
             </p>
             <p>
-                <h2> Je m’entraîne  </h2>
+                <h2> Je m’entraîne  </h2> 
                 Assimilez toutes les notions des programmes à l’aide de 50 000 exercices corrigés. Plus aucune surprise lors des contrôles.
 
             </p>
             <p>
-                <h2> Je m’évalue </h2>
+                <h2> Je m’évalue </h2> 
                 Validez vos acquis et découvrez votre classement par rapport aux autres élèves. Un seul objectif : récolter le plus de badges possibles.
             </p>
         </div>
@@ -126,5 +164,5 @@
 
 
 
-
+  
 
