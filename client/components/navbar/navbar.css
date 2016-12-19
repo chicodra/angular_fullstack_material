@@ -2,6 +2,10 @@ md-menu md-menu-content {
     background-color: transparent;
 } 
 
+.toolbar {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 .navbar {
     position: fixed;
     width: 100%;

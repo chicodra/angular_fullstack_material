@@ -2,29 +2,50 @@ ul li{
   list-style: none;
 }
 .list{
-  
+    background-color: #3F51B5;
+    opacity: 0.8;
+    margin-top: 60px;
+    height: 60px;
 }
+
+.listMobile {
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
 
 /*.carddemoBasicUsage .card-media {
   background-color: #999999; 
   }*/
-  .inter{
-    
+  .intro{
+    margin-top: -17px;
+    height: 450px;
   }
-  .inter img{
-    width:50%;
+
+  .mdcard1{
+    margin-right: -8px;
+    height: 300px;
   }
-  .inter .md-headline{
+  .mdcard2{
+    height: 300px;
+  }
+
+
+  .md-headline{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 20px;
     text-align: center;
-    color: red;
+    color: black;
     
   }
 
+  .inter {
+    background-color: transparent;
+    width: 100%;
+  }
+
   .navbar2 {
-    background-color: #97D5F5;
-    margin-top: 80px;
+
   }
 
   .fixe {
@@ -50,6 +71,8 @@ ul li{
   }
 
   #dropdown {
+    background-color: #3F51B5;
+    border-radius: 8px;
     margin: 0;
     padding: 0;
   }
@@ -66,7 +89,6 @@ ul li{
 
   #dropdown li {
     list-style: none;
-    border-radius: 35px;
   }
 
   #dropdown li:not(.active) {
@@ -91,7 +113,8 @@ ul li{
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  #dropdown li.active:cli {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 
+
+.lesClasses {
+
+    }

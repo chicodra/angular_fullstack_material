@@ -87,3 +87,7 @@ function display() {
     var ok = document.querySelectorAll('#dropdown li:not(.active)');
     console.log(ok)
 }
+
+$('#dropdown').click(function(){
+  alert(ok);
+});
