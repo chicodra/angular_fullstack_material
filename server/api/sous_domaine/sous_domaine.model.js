@@ -11,4 +11,4 @@ var SousDomaineSchema = new Schema({
   active: Boolean
 });
 
-module.exports = mongoose.model('SousDomaine', SousDomaineSchema);
+module.exports = mongoose.model('Sous_Domaine', SousDomaineSchema);
