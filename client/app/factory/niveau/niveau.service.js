@@ -1,29 +1,28 @@
 'use strict';
 
 angular.module('appChicoApp')
-  .factory('Niveau', function ($http,$q) {
+  .service('Niveau', function ($http,$q) {
     // Service logic
     // ...
+    this.listNiveau=[];
+    this.niveau=[];
 
-    var niveau={};
-    niveau.listeNiveauByCycle=function (id) {
+    this.listeNiveauByCycle=function (id) {
       var deferred=$q.defer();
       var listNiveau=[];
-      console.log(id);
-      $http.get('/api/niveaus/cycle',id).then(function(listNiveau) {
-        console.log("cycle",listNiveau);
-        listNiveau=listNiveau.data;
+      //console.log(id);
+      $http.get('/api/niveaus/cycle/'+id ).then(function(listNiveaux) {
+        //console.log("cycle",listNiveaux.data);
+        listNiveau=listNiveaux.data;
         deferred.resolve(listNiveau);
 
       });
       listNiveau=deferred.promise;
-
       return listNiveau;
 
 
 
 
     }
-    return niveau;
 
   });

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('appChicoApp')
-  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket) {
+  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket,Domaine,Niveau) {
     $scope.classeLib = $routeParams.classeLib;
 
     $scope.toggleLeft = buildToggler('left');
@@ -16,6 +16,23 @@ angular.module('appChicoApp')
 
 
     // accordion
+    function init() {
+      var niveaux;
+      console.log('classe log',Niveau.niveau)
+      // for(var niveau in Niveau.listNiveau){
+      //   if(niveau.label==$scope.classeLib){
+      //     niveaux=niveau
+      //   }
+      // }
+      Domaine.listeDomaineByNiveau(Niveau.niveau._id).then(function (listDomaines) {
+        $scope.listDomaines=listDomaines;
+        console.log("liste cycle",$scope.listDomaines);
+        //clickCycle($scope.listCycles[1]);
+
+      });
+
+    }
+    $scope.init=init();
 
     $scope.groups = [];
     for (var i = 0; i < 5; i++) {
