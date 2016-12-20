@@ -21,10 +21,14 @@ function onConnect(socket) {
   require('../api/lecon/lecon.socket').register(socket);
   require('../api/chapitre/chapitre.socket').register(socket);
   require('../api/matiere/matiere.socket').register(socket);
+<<<<<<< HEAD
   require('../api/sous_domaine/sous_domaine.socket').register(socket);
   require('../api/domaine/domaine.socket').register(socket);
   require('../api/niveau/niveau.socket').register(socket);
   require('../api/cycle/cycle.socket').register(socket);
+=======
+  require('../api/classe/classe.socket').register(socket);
+>>>>>>> master
   require('../api/thing/thing.socket').register(socket);
 }
 

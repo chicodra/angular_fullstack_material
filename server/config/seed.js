@@ -7,10 +7,14 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+<<<<<<< HEAD
 var Cycle = require('../api/cycle/cycle.model');
 var Niveau = require('../api/niveau/niveau.model');
 var Domaine = require('../api/domaine/domaine.model');
 var SDomaine = require('../api/sous_domaine/sous_domaine.model');
+=======
+var Classe = require('../api/classe/classe.model');
+>>>>>>> master
 var Mat = require('../api/matiere/matiere.model');
 var Chap = require('../api/chapitre/chapitre.model');
 var Lec = require('../api/lecon/lecon.model');
@@ -54,6 +58,7 @@ Cycle.find({}).remove(function () {
 );
 });
 
+<<<<<<< HEAD
 Niveau.find({}).remove(function () {
   Niveau.create({
   _id: "58582af366b2e8df24696d5e",
@@ -108,6 +113,8 @@ function () {
     }
   );
 });
+=======
+>>>>>>> master
 
 SDomaine.find({}).remove(function () {
   SDomaine.create({

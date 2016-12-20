@@ -13,10 +13,14 @@ module.exports = function(app) {
   app.use('/api/lecons', require('./api/lecon'));
   app.use('/api/chapitres', require('./api/chapitre'));
   app.use('/api/matieres', require('./api/matiere'));
+<<<<<<< HEAD
   app.use('/api/sous_domaines', require('./api/sous_domaine'));
   app.use('/api/domaines', require('./api/domaine'));
   app.use('/api/niveaus', require('./api/niveau'));
   app.use('/api/cycles', require('./api/cycle'));
+=======
+  app.use('/api/classes', require('./api/classe'));
+>>>>>>> master
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 
