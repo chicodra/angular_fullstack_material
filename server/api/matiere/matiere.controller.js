@@ -20,6 +20,17 @@ exports.show = function(req, res) {
   });
 };
 
+//get matiere by sous-domaine
+exports.getMatBySous = function (req, res) { 
+  Matiere.find({ sous_domaine: req.params.id}, function(err, matieres){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(matieres);
+    }
+  });
+  
+};
+
 // Creates a new matiere in the DB.
 exports.create = function(req, res) {
   Matiere.create(req.body, function(err, matiere) {

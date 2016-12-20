@@ -6,8 +6,8 @@ var controller = require('./chapitre.controller');
 var router = express.Router();
 
 router.get('/', controller.index);
+router.get('/matiere/:id', controller.getChapitreByMatieres);
 router.get('/:id', controller.show);
-router.get('/matiere/:id&:ids', controller.getByMat);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);

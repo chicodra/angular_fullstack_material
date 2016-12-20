@@ -11,27 +11,24 @@ exports.index = function(req, res) {
   });
 };
 
+//get Chapitres by Matieres
+
+exports.getChapitreByMatieres = function (req, res) { 
+  Chapitre.find({ matiere: req.params.id}, function(err, chapitres){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(chapitres);
+    }
+  });
+  
+};
+
 // Get a single chapitre
 exports.show = function(req, res) {
   Chapitre.findById(req.params.id, function (err, chapitre) {
     if(err) { return handleError(res, err); }
     if(!chapitre) { return res.status(404).send('Not Found'); }
     return res.json(chapitre);
-  });
-};
-exports.showContenu = function(req, res) {
-  Chapitre.findById(req.params.id, function (err, chapitre) {
-    if(err) { return handleError(res, err); }
-    if(!chapitre) { return res.status(404).send('Not Found'); }
-    return res.json(chapitre.contenu);
-  });
-};
-
-//Get Chapitre By matiere and Classe
-exports.getByMat = function(req, res) {
-  Chapitre.find({matiere:req.params.id,classe:req.params.ids}, function (err, chapitres) {
-    if(err) return res.status(500).send(err);
-    res.status(200).json(chapitres);
   });
 };
 
