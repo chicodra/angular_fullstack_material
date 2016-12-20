@@ -11,6 +11,17 @@ exports.index = function(req, res) {
   });
 };
 
+//get domaine by niveau
+exports.getDomByNivo = function (req, res) { 
+  Domaine.find({ niveau: req.params.id}, function(err, domaines){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(domaines);
+    }
+  });
+  
+};
+
 // Get a single domaine
 exports.show = function(req, res) {
   Domaine.findById(req.params.id, function (err, domaine) {

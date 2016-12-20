@@ -11,6 +11,17 @@ exports.index = function(req, res) {
   });
 };
 
+//get sous-domaine by domaine
+exports.getSousByDom = function (req, res) { 
+  SousDomaine.find({ domaine: req.params.id}, function(err, sous_domaines){
+    if(err) { return handleError (res, err); }
+    else{
+      return res.status(200).json(sous_domaines);
+    }
+  });
+  
+};
+
 // Get a single sous_domaine
 exports.show = function(req, res) {
   SousDomaine.findById(req.params.id, function (err, sous_domaine) {

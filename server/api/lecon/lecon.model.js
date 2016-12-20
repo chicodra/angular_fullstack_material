@@ -8,8 +8,7 @@ var LeconSchema = new Schema({
   chapitre:{
         type: Schema.Types.ObjectId, ref: 'Chapitre' 
     },
-    rang: Number,
-  active: Boolean
+    rang: Number
 });
 
 module.exports = mongoose.model('Lecon', LeconSchema);

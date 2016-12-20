@@ -25,7 +25,6 @@ function onConnect(socket) {
   require('../api/domaine/domaine.socket').register(socket);
   require('../api/niveau/niveau.socket').register(socket);
   require('../api/cycle/cycle.socket').register(socket);
-  require('../api/classe/classe.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
 
