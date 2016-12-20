@@ -137,6 +137,11 @@ ul li{
 
   /* FIN les cycles */
 
+  .lesCycles {
+    height: 200px;
+    width: 200px;
+  }
+
 .md-padding {
   height: 150px;
 }

@@ -31,12 +31,14 @@
       float: left;
       background-color: red;
       /*background-color: #283593;*/
-      width: 6%;
+      width: 10%;
       height: 90%;
+      
   }
 
   .contenuGauche {
-      /*width: 15%;*/
+      display: inline-block;
+      width: 20%;
       /*margin-left: -px;*/
   }
 
