@@ -8,8 +8,7 @@ var NiveauSchema = new Schema({
   abrv: String,
   cycle:{
         type: Schema.Types.ObjectId, ref: 'Cycle' 
-    },
-  active: Boolean
+    }
 });
 
 module.exports = mongoose.model('Niveau', NiveauSchema);

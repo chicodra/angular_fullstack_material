@@ -8,8 +8,7 @@ var ChapitreSchema = new Schema({
   matiere:{
         type: Schema.Types.ObjectId, ref: 'Matiere' 
     },
-    rang: Number,
-  active: Boolean
+    rang: Number
 });
 
 module.exports = mongoose.model('Chapitre', ChapitreSchema);
