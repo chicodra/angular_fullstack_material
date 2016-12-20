@@ -15,18 +15,24 @@
             </li>
         </ul>
     </div>
-    <div layout="column" layout-align="center center" style="padding:40px" ng-cloak hide show-sm show-xs>
+    <div class="listMobile" layout="column" layout-align="center center" style="padding:40px" ng-cloak hide show-sm show-xs>
         <div layout="column" layout-align="center center">
-            <!--<md-select id="select" placeholder="Assign to user" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;">
-            <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
-            </md-select>
-            <p class="md-caption">You have assigned the task to: {{ user ? user.name : 'No one yet' }}</p>-->
-            <ul id="dropdown" onClick="display()">
+
+            <ul id="dropdown" ng-click="ok">
+
                 <li class="active"><a href="#">Elèves</a></li>
-                <li><a href="#">Parents</a></li>
-                <li><a href="#">Enseignants</a></li>
-                <li><a href="#">Professeurs</a></li>
+                <div ng-show="ok">
+                    <li><a href="#">Parents</a></li>
+                    <li><a href="#">Enseignants</a></li>
+                    <li><a href="#">Professeurs</a></li>
+                </div>
             </ul>
+            <!--<md-select>
+                <md-option nvalue="Elèves">Elèves</md-option>
+                <md-option nvalue="Parents">Parents</md-option>
+                <md-option nvalue="Enseignants">Enseignants</md-option>
+                <md-option nvalue="Professeurs">Professeurs</md-option>
+            </md-select>-->
         </div>
     </div>
 
@@ -34,7 +40,7 @@
 
 <div class="intro">
     <div layout="column" layout-align="center center">
-        <h1 style="color: white; opacity: 0.9; margin-top: 70px; ">
+        <h1 style="color: black; opacity: 0.9; margin-top: 70px; ">
             Boostez vos notes comme 1 million d’élèves.
         </h1>
         <div layout="row" layout-align="center center">
@@ -44,14 +50,38 @@
                         <span class="md-headline">Découvrez Kartable avant de vous inscrire</span>
                     </md-card-title-text>
                 </md-card-title>
+
                 <md-card-content layout="row" layout-align="space-between center">
-                    <div class="lesClasses" layout-align="center center">
+                    <!--<div class="lesClasses" layout-align="center center">
 
                         <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
 
+                    </div>-->
+
+                    <div ng-cloak>
+                        <md-content >
+                            <md-tabs md-dynamic-height md-border-bottom>
+                                <md-tab label="Primaire">
+                                    <md-content class="md-padding">
+                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Secondaire">
+                                    <md-content class="md-padding">
+                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Enseignement superieur">
+                                    <md-content class="md-padding">
+                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
+                                    </md-content>
+                                </md-tab>
+                            </md-tabs>
+                        </md-content>
                     </div>
+
                 </md-card-content>
             </md-card>
+
             <md-card class="mdcard2" flex="40" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch layout-align="center center">
                 <md-card-title>
                     <md-card-title-text>
@@ -111,3 +141,6 @@
         </md-card>
     </section>
 </div>
+
+
+<div ng-include="'components/footer/footer.html'">
