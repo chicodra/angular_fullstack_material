@@ -4,9 +4,9 @@ angular.module('appChicoApp')
   .controller('MainCtrl', function ($timeout, $scope, $http, socket,Cycle,Niveau) {
     $scope.awesomeThings = [];
     $scope.listCycles=[];
-    console.log("liste cycle",$scope.listCycles);
+    //console.log("liste cycle",$scope.listCycles);
     $scope.listNiveau=[];
-    console.log("liste niveau",$scope.listNiveau);
+    //console.log("liste niveau",$scope.listNiveau);
 
 
 
@@ -20,14 +20,14 @@ angular.module('appChicoApp')
     function init() {
       Cycle.listCycles().then(function (listCycles) {
         $scope.listCycles=listCycles;
-        console.log("liste cycle",$scope.listCycles);
+        //console.log("liste cycle",$scope.listCycles);
         clickCycle($scope.listCycles[1]);
 
       });
 
     }
     $scope.Partager=function (classe) {
-      console.log("partage",classe);
+      //console.log("partage",classe);
       Niveau.niveau=classe;
     }
     $scope.init=init;
@@ -36,14 +36,14 @@ angular.module('appChicoApp')
       console.log("cycle",cycle)
 
       Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
-        console.log(listNiveau)
+        //console.log(listNiveau)
         if(listNiveau==null ){
           $scope.listNiveau=[];
-          console.log("list Niveau",$scope.listNiveau);
+          //console.log("list Niveau",$scope.listNiveau);
         }
         else{
           $scope.listNiveau=listNiveau;
-          console.log("list Niveau",$scope.listNiveau);
+          //console.log("list Niveau",$scope.listNiveau);
 
         }
 
