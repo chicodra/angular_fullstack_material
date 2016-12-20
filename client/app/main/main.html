@@ -38,7 +38,7 @@
 
 </div>
 
-<div class="intro">
+<div class="intro" >
     <div layout="column" layout-align="center center">
         <h1 style="color: black; opacity: 0.9; margin-top: 70px; ">
             Boostez vos notes comme 1 million d’élèves.
@@ -58,23 +58,20 @@
 
                     </div>-->
 
+<<<<<<< HEAD
                     <div ng-cloak>
                         <md-content class="lesCycles">
+=======
+                    <div ng-cloak ng-init="init()">
+                        <md-content >
+>>>>>>> 9ff878adeb01e2bc1b9cbaa5598472f442e045cc
                             <md-tabs md-dynamic-height md-border-bottom>
-                                <md-tab label="Primaire">
+                                <md-tab ng-repeat="cycle in listCycles" label={{cycle.label}} ng-click="clickCycle(cycle)">
                                     <md-content class="md-padding">
                                         <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
                                     </md-content>
                                 </md-tab>
-                                <md-tab label="Secondaire">
-                                    <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>                                    </md-content>
-                                </md-tab>
-                                <md-tab label="Enseignement superieur">
-                                    <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
-                                    </md-content>
-                                </md-tab>
+
                             </md-tabs>
                         </md-content>
                     </div>

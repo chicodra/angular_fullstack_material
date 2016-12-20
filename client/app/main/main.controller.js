@@ -1,19 +1,42 @@
 'use strict';
 
 angular.module('appChicoApp')
-  .controller('MainCtrl', function ($timeout, $scope, $http, socket) {
+  .controller('MainCtrl', function ($timeout, $scope, $http, socket,Cycle,Niveau) {
     $scope.awesomeThings = [];
+    $scope.listCycles=[];
+    console.log("liste cycle",$scope.listCycles);
 
-    $http.get('/api/things').then(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-      socket.syncUpdates('thing', $scope.awesomeThings);
-    });
+
+
+
     $scope.currentNavItem = 'page1';
     $http.get('/api/niveaus').then(function(listClasse) {
-      console.log($scope.listClasse);
       $scope.listClasse = listClasse.data
       console.log("data", listClasse.data);
     });
+
+    function init() {
+      Cycle.listCycles().then(function (listCycles) {
+        $scope.listCycles=listCycles;
+        console.log("liste cycle",$scope.listCycles);
+
+      });
+
+    }
+    $scope.init=init;
+    //init();
+    function clickCycle(cycle) {
+      console.log("cycle",cycle)
+      Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
+        $scope.listNiveau=listNiveau;
+        console.log("list Niveau",$scope.listNiveau);
+
+      });
+
+    }
+    $scope.clickCycle=clickCycle;
+
+
 
 
 
