@@ -1,3 +1,63 @@
-<p>
-  vous etes dans la classe {{classeLib}}
-</p>
+<div class="palette">
+  <div class="haut" ng-controller="ClasseCtrl" ng-cloak>
+    <md-content class="contentHaut">
+      <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+          <span style="margin-left: 30px;">Secondaire</span>
+          <span style="margin-left: 20px;">Sixième</span>
+          <span style="margin-left: 20px;">Mathèmatiques</span>
+        </div>
+      </md-toolbar>
+    </md-content>
+  </div>
+  <div class="gauche">
+    <!--<ul class="contenuGauche">
+      <li>
+        <a href="#"><img src="../../assets/images/images.jpg" alt="img"></a>
+      </li>
+      <li>
+        <a href="#"><img src="" alt="img"></a>
+      </li>
+      <li>
+        <a href="#"><img src="" alt="img"></a>
+      </li>
+    </ul>-->
+    <div class="contenuGauche" ng-controller="ClasseCtrl">
+      <ion-content>
+
+        <ion-list>
+          <div ng-repeat="group in groups">
+            <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Group {{group.name}}
+            </ion-item>
+            <ion-item class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
+              {{item}}
+            </ion-item>
+          </div>
+        </ion-list>
+
+      </ion-content>
+    </div>
+
+  </div>
+  <div class="corps">
+    <ul class="contenuCorps">
+      <li>
+        <a href="#">
+          <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="" alt="img"> <br> Anglais
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="" alt="img"> <br> Histo-Geo
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>

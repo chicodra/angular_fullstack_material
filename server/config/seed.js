@@ -7,14 +7,11 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
-<<<<<<< HEAD
 var Cycle = require('../api/cycle/cycle.model');
 var Niveau = require('../api/niveau/niveau.model');
 var Domaine = require('../api/domaine/domaine.model');
 var SDomaine = require('../api/sous_domaine/sous_domaine.model');
-=======
 var Classe = require('../api/classe/classe.model');
->>>>>>> master
 var Mat = require('../api/matiere/matiere.model');
 var Chap = require('../api/chapitre/chapitre.model');
 var Lec = require('../api/lecon/lecon.model');
