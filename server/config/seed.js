@@ -59,17 +59,17 @@ Niveau.find({}).remove(function () {
   _id: "58582af366b2e8df24696d5e",
   label: "sixieme",
   abrv: "6éme",
-  cycle:"585825ac65717b6822c057bb"
+  cycle:"585825ac65717b6822c057bc"
   },{
   _id: "58582af366b2e8df24696d5f",
   label: "cinquieme",
   abrv: "5éme",
-  cycle:"585825ac65717b6822c057bb"
+  cycle:"585825ac65717b6822c057bc"
   },{
   _id: "58582af366b2e8df24696d60",
   label: "quatrieme",
   abrv: "4éme",
-  cycle:"585825ac65717b6822c057bb"
+  cycle:"585825ac65717b6822c057bc"
   }
   ,function () {
       console.log('finished populating Niveau');

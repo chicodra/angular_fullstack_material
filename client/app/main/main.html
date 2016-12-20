@@ -54,7 +54,7 @@
                 <md-card-content layout="row" layout-align="space-between center">
                     <!--<div class="lesClasses" layout-align="center center">
 
-                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
+                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrv}}</md-button>
 
                     </div>-->
 
@@ -63,16 +63,16 @@
                             <md-tabs md-dynamic-height md-border-bottom>
                                 <md-tab label="Primaire">
                                     <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
+                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
                                     </md-content>
                                 </md-tab>
                                 <md-tab label="Secondaire">
                                     <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>                                    </md-content>
+                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>                                    </md-content>
                                 </md-tab>
                                 <md-tab label="Enseignement superieur">
                                     <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.abrev}}</md-button>
+                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
                                     </md-content>
                                 </md-tab>
                             </md-tabs>
