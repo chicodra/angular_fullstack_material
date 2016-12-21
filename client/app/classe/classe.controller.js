@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('appChicoApp')
-  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket) {
+  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket,Domaine,Niveau,sousDomaine,Matiere) {
     $scope.classeLib = $routeParams.classeLib;
 
     $scope.toggleLeft = buildToggler('left');
@@ -16,6 +16,46 @@ angular.module('appChicoApp')
 
 
     // accordion
+    function init() {
+
+      Domaine.listeDomaineByNiveau(Niveau.niveau._id).then(function (listDomaines) {
+        $scope.listDomaines=listDomaines;
+        console.log("liste domaines",$scope.listDomaines);
+        domaineClick($scope.listDomaines[0]);
+        //clickCycle($scope.listCycles[1]);
+
+      });
+
+    }
+    $scope.init=init();
+
+    function domaineClick(domaine) {
+      console.log("on domaine click",domaine);
+      sousDomaine.listeSousDomaineByDomaine(domaine._id).then(function (listSousDomaines) {
+        console.log("list sous domaine",listSousDomaines);
+        $scope.listSousDomaines=listSousDomaines;
+        sousDomaineClick(listSousDomaines[0]);
+
+       });
+
+
+
+    }
+
+    //domaineClick($scope.listDomaines[0]);
+    $scope.domaineClick=domaineClick;
+
+    function sousDomaineClick(sousdomaine) {
+      Matiere.listeMatieresBySousDomaines(sousdomaine._id).then(function (listMatieres) {
+        console.log("list matieres",listMatieres);
+        $scope.listMatieres=listMatieres;
+
+
+      });
+
+    }
+    $scope.sousDomaineClick=sousDomaineClick;
+
 
     $scope.groups = [];
     for (var i = 0; i < 5; i++) {

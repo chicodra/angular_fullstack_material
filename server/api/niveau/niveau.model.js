@@ -7,7 +7,7 @@ var NiveauSchema = new Schema({
   label: String,
   abrv: String,
   cycle:{
-        type: Schema.Types.ObjectId, ref: 'Cycle' 
+        type: Schema.Types.ObjectId, ref: 'Cycle'
     }
 });
 

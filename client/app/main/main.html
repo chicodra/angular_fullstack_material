@@ -64,11 +64,16 @@
 =======
                     <div ng-cloak ng-init="init()">
                         <md-content >
+<<<<<<< HEAD
 >>>>>>> 9ff878adeb01e2bc1b9cbaa5598472f442e045cc
                             <md-tabs md-dynamic-height md-border-bottom>
                                 <md-tab ng-repeat="cycle in listCycles" label={{cycle.label}} ng-click="clickCycle(cycle)">
+=======
+                            <md-tabs md-dynamic-height md-border-bottom md-selected=1>
+                                <md-tab  label={{listCycles[1].label}} md-on-select="clickCycle(listCycles[1])" ">
+>>>>>>> c4fa3afe7db0481129d25a9715c2a32cbd2cbb50
                                     <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listClasse" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
+                                        <md-button ng-repeat="classe in listNiveau"  ng-click="Partager(classe)" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
                                     </md-content>
                                 </md-tab>
 
