@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('appChicoApp')
-  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket,Domaine,Niveau,sousDomaine,Matiere,Chapitre) {
+  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket,Domaine,Niveau,sousDomaine,Matiere,Chapitre,Lecon) {
     $scope.classeLib = $routeParams.classeLib;
 
     $scope.toggleLeft = buildToggler('left');
@@ -57,15 +57,29 @@ angular.module('appChicoApp')
     }
     $scope.sousDomaineClick=sousDomaineClick;
     function MatiereClick(matiere) {
+      console.log('matieres',matiere);
       Chapitre.listeChapitresByMatiere(matiere._id).then(function (listChapitre) {
         console.log(' liste chapitres',listChapitre);
         $scope.listChapitres=listChapitre;
+        ChapitreClick(listChapitre[0]);
 
 
       });
 
     }
     $scope.MatiereClick=MatiereClick;
+
+    function ChapitreClick(chapitre) {
+      Lecon.listLeconsByChapitre(chapitre._id).then(function (listLecons) {
+        console.log("list lecons",listLecons);
+        $scope.listLecons=listLecons;
+
+
+
+      });
+
+    }
+    $scope.ChapitreClick=ChapitreClick;
     //kain
     $scope.accordianData = [
       {

@@ -8,13 +8,14 @@ angular.module('appChicoApp')
       var listChapitres=[];
       //console.log(id);
       $http.get('/api/chapitres/matiere/'+id ).then(function(list) {
-        console.log("chapitres",list);
+
         listChapitres=list.data;
+        console.log("chapitres",listChapitres);
         deferred.resolve(listChapitres);
 
       });
       listChapitres=deferred.promise;
-      return listMatieres;
+      return listChapitres;
 
 
 
