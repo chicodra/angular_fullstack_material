@@ -133,3 +133,9 @@
   cursor:pointer;
   border-bottom:1px solid rgb(63,107,181)
 }
+
+
+.onglet {
+  height: 100px;
+  width: 200px;
+}
