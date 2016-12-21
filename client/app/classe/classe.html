@@ -10,45 +10,47 @@
       </md-toolbar>
     </md-content>
   </div>
-  <div class="gauche">
+  <div class="gauche" ng-init="init()">
     <div class="contenuGauche">
       <md-content>
-        <div class="md-accordion" ng-repeat="data in accordianData">
-          <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded">
+        <div class="md-accordion" ng-repeat="domaine in listDomaines">
+          <md-toolbar ng-init="domaine.expanded = false" ng-click="collapseAll(domaine); domaineClick(domaine)">
             <div class="md-toolbar-tools">
               <h2>
-                <span>{{data.heading}}</span>
+                <span>{{domaine.label}} </span>
               </h2>
               <span flex=""></span>
-              <span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+              <span ng-class="{expandCollapse:true, active:domaine.expanded}"></span>
             </div>
           </md-toolbar>
-          <div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+          <div ng-class="{dataContent:true, activeContent:domaine.expanded}" ng-repeat="sousdomaine in listSousDomaines">
+            <md-button class="md-raised md-warn"> {{sousdomaine.label}} </md-button>
+          </div>
       </md-content>
     </div>
 
-  </div>
-  <div class="corps">
-        <ul class="contenuCorps">
-          <li>
-            <a href="#">
-              <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="" alt="img"> <br> Anglais
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="" alt="img"> <br> Histo-Geo
-            </a>
-          </li>
-        </ul>
-  </div>
+    </div>
+    <div class="corps">
+      <ul class="contenuCorps">
+        <li>
+          <a href="#">
+            <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="" alt="img"> <br> Anglais
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="" alt="img"> <br> Histo-Geo
+          </a>
+        </li>
+      </ul>
+    </div>
 
-</div>
-    <!--
+  </div>
+  <!--
   kain
 -->
