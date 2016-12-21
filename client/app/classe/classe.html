@@ -68,3 +68,20 @@
   </div>
 
 </div>
+<!--
+  kain
+-->
+<md-content> <br>
+  <div class="md-accordion" ng-repeat="data in accordianData">
+    <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>{{data.heading}}</span>
+        </h2>
+        <span flex=""></span>
+        <span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+      </div>
+    </md-toolbar>
+    <div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+    <div>
+</md-content>
