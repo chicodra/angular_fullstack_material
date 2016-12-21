@@ -23,29 +23,35 @@
               <span ng-class="{expandCollapse:true, active:domaine.expanded}"></span>
             </div>
           </md-toolbar>
-          <div ng-class="{dataContent:true, activeContent:domaine.expanded}" ng-repeat="sousdomaine in listSousDomaines">
-            <md-button class="md-raised md-warn"> {{sousdomaine.label}} </md-button>
+          <div ng-class="{dataContent:true, activeContent:domaine.expanded}">
+            <md-button ng-repeat="sousdomaine in listSousDomaines" class="md-raised md-warn" ng-click="sousDomaineClick(sousdomaine)" > {{sousdomaine.label}} </md-button>
           </div>
       </md-content>
-    </div>
+      </div>
 
-    </div>
+</div>
     <div class="corps">
       <ul class="contenuCorps">
-        <li>
+        <li ng-repeat="matiere in listMatieres" ng-mouseover="MatiereClick(matiere)">
           <a href="#">
-            <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
+            <img src="../../assets/images/images.jpg" alt="img"> <br> {{matiere.label}}
           </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="" alt="img"> <br> Anglais
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="" alt="img"> <br> Histo-Geo
-          </a>
+          <div class="chapitres">
+            <li ng-repeat="chapitre in listChapitres">
+             <md-button class="md-raised md-warn" ng-click="ChapitreClick(chapitre)"> {{chapitre.label}} </md-button>
+             <div ng-repeat="lecon in listLecons">
+               <div ng-if="lecon.chapitre === chapitre._id">
+               {{lecon.label}}
+
+               </div>
+               <div ng-if="lecon.chapitre !== chapitre._id">
+
+               </div>
+             </div>
+            </li>
+           
+
+          </div>
         </li>
       </ul>
     </div>
