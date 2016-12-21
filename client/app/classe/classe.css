@@ -29,16 +29,9 @@
   .gauche {
       position: absolute;
       float: left;
-      background-color: red;
-      /*background-color: #283593;*/
-      width: 6%;
-      height: 90%;
+      width: 25%;
   }
 
-  .contenuGauche {
-      /*width: 15%;*/
-      /*margin-left: -px;*/
-  }
 
   .contenuGauche li a img {
       display: inline-block;
@@ -48,12 +41,14 @@
 
   .corps {
       /*margin: 0 auto;*/
-      margin-left: 50px;
+      margin-top: -500px;
+      margin-left: 400px;
   }
 
   .contenuCorps li {
       display: inline-block;
       margin-left: 50px;
+      margin: 0 auto;
   }
 
   .contenuCorps li a img {
@@ -68,22 +63,6 @@
         width: 120px;
         height: 120px;
   }
-
-  /*accordion*/
-  .list .item.item-accordion {
-  line-height: 38px;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: 0.09s all linear;
-}
-.list .item.item-accordion.ng-hide {
-  line-height: 0px;
-}
-.list .item.item-accordion.ng-hide-add,
-.list .item.item-accordion.ng-hide-remove {
-  display: block !important;
-}
-/* FIN accordion */
 
 
 /* accordeon pour kain */

@@ -1,5 +1,5 @@
 <div class="palette">
-  <div class="haut"  ng-cloak>
+  <div class="haut" ng-cloak>
     <md-content class="contentHaut">
       <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
@@ -11,70 +11,44 @@
     </md-content>
   </div>
   <div class="gauche">
-    <!--<ul class="contenuGauche">
-      <li>
-        <a href="#"><img src="../../assets/images/images.jpg" alt="img"></a>
-      </li>
-      <li>
-        <a href="#"><img src="" alt="img"></a>
-      </li>
-      <li>
-        <a href="#"><img src="" alt="img"></a>
-      </li>
-    </ul>-->
-    <div class="contenuGauche" >
-      <ion-content>
-
-        <ion-list>
-          <div ng-repeat="group in groups">
-            <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
-              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Group {{group.name}}
-            </ion-item>
-            <ion-item class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
-              {{item}}
-            </ion-item>
-          </div>
-        </ion-list>
-
-      </ion-content>
+    <div class="contenuGauche">
+      <md-content>
+        <div class="md-accordion" ng-repeat="data in accordianData">
+          <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded">
+            <div class="md-toolbar-tools">
+              <h2>
+                <span>{{data.heading}}</span>
+              </h2>
+              <span flex=""></span>
+              <span ng-class="{expandCollapse:true, active:data.expanded}"></span>
+            </div>
+          </md-toolbar>
+          <div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
+      </md-content>
     </div>
 
   </div>
   <div class="corps">
-    <ul class="contenuCorps">
-      <li>
-        <a href="#">
-          <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="" alt="img"> <br> Anglais
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="" alt="img"> <br> Histo-Geo
-        </a>
-      </li>
-    </ul>
+        <ul class="contenuCorps">
+          <li>
+            <a href="#">
+              <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="" alt="img"> <br> Anglais
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="" alt="img"> <br> Histo-Geo
+            </a>
+          </li>
+        </ul>
   </div>
 
 </div>
-<!--
+    <!--
   kain
 -->
-<md-content> <br>
-  <div class="md-accordion" ng-repeat="data in accordianData">
-    <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded">
-      <div class="md-toolbar-tools">
-        <h2>
-          <span>{{data.heading}}</span>
-        </h2>
-        <span flex=""></span>
-        <span ng-class="{expandCollapse:true, active:data.expanded}"></span>
-      </div>
-    </md-toolbar>
-    <div ng-class="{dataContent:true, activeContent:data.expanded}">{{data.content}}</div>
-    <div>
-</md-content>
