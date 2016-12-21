@@ -3,7 +3,6 @@
 angular.module('appChicoApp')
   .service('Domaine', function ($http,$q) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    this.listNiveau=[];
     this.listeDomaineByNiveau=function (id) {
       var deferred=$q.defer();
       var listDomaine=[];

@@ -20,46 +20,50 @@ angular.module('appChicoApp')
     function init() {
       Cycle.listCycles().then(function (listCycles) {
         $scope.listCycles=listCycles;
-        //console.log("liste cycle",$scope.listCycles);
+        console.log("liste cycle",$scope.listCycles);
         clickCycle($scope.listCycles[1]);
 
       });
 
     }
     $scope.Partager=function (classe) {
-      //console.log("partage",classe);
+     // console.log("partage",classe);
       Niveau.niveau=classe;
     }
     $scope.init=init;
     //init();
     function clickCycle(cycle) {
-      console.log("cycle",cycle)
+      if (cycle != undefined){
+       // console.log("cycle",cycle)
 
-      Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
-        //console.log(listNiveau)
-        if(listNiveau==null ){
-          $scope.listNiveau=[];
-          //console.log("list Niveau",$scope.listNiveau);
-        }
-        else{
-          $scope.listNiveau=listNiveau;
-          //console.log("list Niveau",$scope.listNiveau);
+        Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
+          //console.log(listNiveau)
+          if(listNiveau==null ){
+            $scope.listNiveau=[];
+            //console.log("list Niveau",$scope.listNiveau);
+          }
+          else{
+            $scope.listNiveau=listNiveau;
+            //console.log("list Niveau",$scope.listNiveau);
 
-        }
+          }
 
 
-      });
-      function disable(cycle) {
-        if($scope.listCycles.indexOf(cycle)!=1){
-          return true;
-        }
-        return false;
-
+        });
       }
-      $scope.disable=disable;
+
+
 
     }
     $scope.clickCycle=clickCycle;
+    function disable(cycle) {
+      if($scope.listCycles.indexOf(cycle)!=1){
+        return true;
+      }
+      return false;
+
+    }
+    $scope.disable=disable;
 
 
 

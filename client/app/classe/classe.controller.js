@@ -17,34 +17,31 @@ angular.module('appChicoApp')
 
     // accordion
     function init() {
-      var niveaux;
-      //console.log('classe log',Niveau.niveau)
-      // for(var niveau in Niveau.listNiveau){
-      //   if(niveau.label==$scope.classeLib){
-      //     niveaux=niveau
-      //   }
-      // }
+
       Domaine.listeDomaineByNiveau(Niveau.niveau._id).then(function (listDomaines) {
         $scope.listDomaines=listDomaines;
-        console.log("liste cycle",$scope.listDomaines);
-        onDomaineClick(listDomaines[0]);
+        console.log("liste domaines",$scope.listDomaines);
+        domaineClick($scope.listDomaines[0]);
         //clickCycle($scope.listCycles[1]);
 
       });
 
     }
-    $scope.init=init;
-    function onDomaineClick(domaine) {
-      sousDomaine.listeDomaineByNiveau(domaine._id).then(function (listSousDomaines) {
+
+    function domaineClick(domaine) {
+      console.log("on domaine click",domaine);
+      sousDomaine.listeSousDomaineByDomaine(domaine._id).then(function (listSousDomaines) {
         console.log("list sous domaine",listSousDomaines);
         $scope.listSousDomaines=listSousDomaines;
 
-      })
+       });
 
 
 
     }
-    $scope.onDomaineClick=onDomaineClick;
+    $scope.init=init();
+    //domaineClick($scope.listDomaines[0]);
+    $scope.domaineClick=domaineClick;
 
     $scope.groups = [];
     for (var i = 0; i < 5; i++) {

@@ -1,20 +1,20 @@
 'use strict';
 
 angular.module('appChicoApp')
-  .service('sousDomaine', function () {
+  .service('sousDomaine', function ($http,$q) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     this.listeSousDomaineByDomaine=function (id) {
       var deferred=$q.defer();
-      var listSousDomaines=[];
+      var listSousDomaine=[];
       //console.log(id);
       $http.get('/api/sous_domaines/domaine/'+id ).then(function(listSousDomaines) {
-        console.log("cycle",listSousDomaines);
-        listSousDomaines=listSousDomaines.data;
+        console.log("sous domaine",listSousDomaines);
+        listSousDomaine=listSousDomaines.data;
         deferred.resolve(listSousDomaine);
 
       });
-      listSousDomaines=deferred.promise;
-      return listSousDomaines;
+      listSousDomaine=deferred.promise;
+      return listSousDomaine;
 
 
 
