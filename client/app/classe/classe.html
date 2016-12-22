@@ -39,7 +39,7 @@
           <div class="chapitres">
             <li ng-repeat="chapitre in listChapitres">
              <md-button class="md-raised md-warn" ng-click="ChapitreClick(chapitre)"> {{chapitre.label}} </md-button>
-             <div ng-repeat="lecon in listLecons">
+             <div ng-repeat="lecon in listLecons" class="men-lecon">
                <div ng-if="lecon.chapitre === chapitre._id">
                {{lecon.label}}
 
@@ -49,7 +49,7 @@
                </div>
              </div>
             </li>
-           
+
 
           </div>
         </li>
