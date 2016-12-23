@@ -5,7 +5,7 @@ angular.module('appChicoApp')
     // Service logic
     // ...
     this.listNiveau=[];
-    this.niveau=[];
+    this.niveau=null;
 
     this.listeNiveauByCycle=function (id) {
       var deferred=$q.defer();
@@ -24,5 +24,24 @@ angular.module('appChicoApp')
 
 
     }
+    this.getNiveauByLabel=function (label) {
+      var deferred=$q.defer();
+      var niveau=[];
+      //console.log(id);
+      $http.get('/api/niveaus/label/'+label ).then(function(niveaux) {
+        console.log("niveau",niveaux.data);
+        niveau=niveaux.data[0];
+        deferred.resolve(niveau);
+
+      });
+      niveau=deferred.promise;
+      return niveau;
+
+
+
+
+    }
+
+
 
   });

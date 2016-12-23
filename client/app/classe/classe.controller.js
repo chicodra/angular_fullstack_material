@@ -16,18 +16,34 @@ angular.module('appChicoApp')
     }
 
 
-    // accordion
-    function init() {
-
-      Domaine.listeDomaineByNiveau(Niveau.niveau._id).then(function (listDomaines) {
-        $scope.listDomaines = listDomaines;
-        console.log("liste domaines", $scope.listDomaines);
-        //domaineClick($scope.listDomaines[0]);
-        //clickCycle($scope.listCycles[1]);
-
-      });
+    function initNiveau() {
 
     }
+
+    function init() {
+      //console.log(Niveau.niveau);
+
+      if (Niveau.niveau == null) {
+
+        Niveau.getNiveauByLabel($scope.classeLib).then(function (niveau) {
+          console.log("classe lib", niveau);
+          Niveau.niveau = niveau;
+
+        });
+      }
+      window.setTimeout(function () {
+        Domaine.listeDomaineByNiveau(Niveau.niveau._id).then(function (listDomaines) {
+          $scope.listDomaines = listDomaines;
+          console.log("liste domaines", $scope.listDomaines);
+          //domaineClick($scope.listDomaines[0]);
+          //clickCycle($scope.listCycles[1]);
+
+        })
+      }, 100);
+
+
+    }
+
     $scope.init = init();
 
     function domaineClick(domaine) {
@@ -42,14 +58,13 @@ angular.module('appChicoApp')
       });
 
 
-
     }
 
     //domaineClick($scope.listDomaines[0]);
     $scope.domaineClick = domaineClick;
 
     function sousDomaineClick(sousdomaine) {
-      $scope.listChapitres=[];
+      $scope.listChapitres = [];
       Matiere.listeMatieresBySousDomaines(sousdomaine._id).then(function (listMatieres) {
         console.log("list matieres", listMatieres);
         $scope.listMatieres = listMatieres;
@@ -59,6 +74,7 @@ angular.module('appChicoApp')
       });
 
     }
+
     $scope.sousDomaineClick = sousDomaineClick;
     function MatiereClick(matiere) {
 
@@ -72,15 +88,15 @@ angular.module('appChicoApp')
       });
 
     }
+
     $scope.MatiereClick = MatiereClick;
 
     function ChapitreClick(chapitre) {
       $scope.listLecons = [];
-      $scope.visible=true;
+      $scope.visible = true;
       Lecon.listLeconsByChapitre(chapitre._id).then(function (listLecons) {
         console.log("list lecons", listLecons);
         $scope.listLecons = listLecons;
-
 
 
       });
@@ -98,7 +114,7 @@ angular.module('appChicoApp')
       }
       domaine.expanded = !domaine.expanded;
     };
-    function initParams(){
+    function initParams() {
       //$scope.listDomaines = [];
       $scope.listSousDomaines = [];
       $scope.listLecons = [];
