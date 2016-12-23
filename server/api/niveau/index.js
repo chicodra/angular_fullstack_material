@@ -7,6 +7,7 @@ var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
+router.get('/label/:id',controller.GetNiveauByLabel);
 router.get('/cycle/:id', controller.getNiveauByCycle);
 router.post('/', controller.create);
 router.put('/:id', controller.update);

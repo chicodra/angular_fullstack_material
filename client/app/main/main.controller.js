@@ -4,62 +4,66 @@ angular.module('appChicoApp')
   .controller('MainCtrl', function ($timeout, $scope, $http, socket,Cycle,Niveau) {
     $scope.awesomeThings = [];
     $scope.listCycles=[];
-    console.log("liste cycle",$scope.listCycles);
+    //console.log("liste cycle",$scope.listCycles);
+    $scope.listNiveau=[];
+    //console.log("liste niveau",$scope.listNiveau);
 
 
 
 
     $scope.currentNavItem = 'page1';
-    $http.get('/api/niveaus').then(function(listClasse) {
-      $scope.listClasse = listClasse.data
-      console.log("data", listClasse.data);
-    });
+    // $http.get('/api/niveaus').then(function(listClasse) {
+    //   $scope.listClasse = listClasse.data
+    //   console.log("data", listClasse.data);
+    // });
 
     function init() {
       Cycle.listCycles().then(function (listCycles) {
         $scope.listCycles=listCycles;
         console.log("liste cycle",$scope.listCycles);
+        clickCycle($scope.listCycles[1]);
 
       });
 
+    }
+    $scope.Partager=function (classe) {
+     // console.log("partage",classe);
+      Niveau.niveau=classe;
     }
     $scope.init=init;
     //init();
     function clickCycle(cycle) {
-      console.log("cycle",cycle)
-      Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
-        $scope.listNiveau=listNiveau;
-        console.log("list Niveau",$scope.listNiveau);
+      if (cycle != undefined){
+       // console.log("cycle",cycle)
 
-      });
+        Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
+          //console.log(listNiveau)
+          if(listNiveau==null ){
+            $scope.listNiveau=[];
+            //console.log("list Niveau",$scope.listNiveau);
+          }
+          else{
+            $scope.listNiveau=listNiveau;
+            //console.log("list Niveau",$scope.listNiveau);
+
+          }
+
+
+        });
+      }
+
+
 
     }
     $scope.clickCycle=clickCycle;
+    function disable(cycle) {
+      if($scope.listCycles.indexOf(cycle)!=1){
+        return true;
+      }
+      return false;
 
-
-
-
-
-    //---------------
-    $scope.user = null;
-    $scope.users = null;
-
-    $scope.loadUsers = function() {
-
-    // Use timeout to simulate a 650ms request.
-    return $timeout(function() {
-
-      $scope.users =  $scope.users  || [
-        { id: 1, name: 'Scooby Doo' },
-        { id: 2, name: 'Shaggy Rodgers' },
-        { id: 3, name: 'Fred Jones' },
-        { id: 4, name: 'Daphne Blake' },
-        { id: 5, name: 'Velma Dinkley' }
-      ];
-      }, 650);
     }
-
-      //-------------------------------------------
+    $scope.disable=disable;
 
 
       $scope.getColor = function($index) {

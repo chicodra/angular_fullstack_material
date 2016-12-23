@@ -1,5 +1,5 @@
 <div class="palette">
-  <div class="haut" ng-controller="ClasseCtrl" ng-cloak>
+  <div class="haut" ng-cloak>
     <md-content class="contentHaut">
       <md-toolbar class="md-hue-2">
         <div class="md-toolbar-tools">
@@ -10,54 +10,53 @@
       </md-toolbar>
     </md-content>
   </div>
-  <div class="gauche">
-    <!--<ul class="contenuGauche">
-      <li>
-        <a href="#"><img src="../../assets/images/images.jpg" alt="img"></a>
-      </li>
-      <li>
-        <a href="#"><img src="" alt="img"></a>
-      </li>
-      <li>
-        <a href="#"><img src="" alt="img"></a>
-      </li>
-    </ul>-->
-    <div class="contenuGauche" ng-controller="ClasseCtrl">
-      <ion-content>
-
-        <ion-list>
-          <div ng-repeat="group in groups">
-            <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
-              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Group {{group.name}}
-            </ion-item>
-            <ion-item class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
-              {{item}}
-            </ion-item>
+  <div class="gauche" ng-init="init()">
+    <div class="contenuGauche">
+      <md-content>
+        <div class="md-accordion" ng-repeat="domaine in listDomaines">
+          <md-toolbar ng-init="domaine.expanded = false" ng-click="collapseAll(domaine); domaineClick(domaine)">
+            <div class="md-toolbar-tools">
+              <h2>
+                <span>{{domaine.label}} </span>
+              </h2>
+              <span flex=""></span>
+              <span ng-class="{expandCollapse:true, active:domaine.expanded}"></span>
+            </div>
+          </md-toolbar>
+          <div ng-class="{dataContent:true, activeContent:domaine.expanded}">
+            <md-button ng-repeat="sousdomaine in listSousDomaines" class="md-raised md-warn" ng-click="sousDomaineClick(sousdomaine)" > {{sousdomaine.label}} </md-button>
           </div>
-        </ion-list>
+      </md-content>
+      </div>
 
-      </ion-content>
+</div>
+    <div class="corps">
+      <ul class="contenuCorps">
+        <li ng-repeat="matiere in listMatieres" ng-mouseover="MatiereClick(matiere)">
+          <a href="#">
+            <img src="../../assets/images/images.jpg" alt="img"> <br> {{matiere.label}}
+          </a>
+          <div class="chapitres">
+            <li ng-repeat="chapitre in listChapitres">
+             <md-button class="md-raised md-warn" ng-click="ChapitreClick(chapitre)"> {{chapitre.label}} </md-button>
+             <div ng-repeat="lecon in listLecons" class="men-lecon">
+               <div ng-if="lecon.chapitre === chapitre._id">
+               {{lecon.label}}
+
+               </div>
+               <div ng-if="lecon.chapitre !== chapitre._id">
+
+               </div>
+             </div>
+            </li>
+
+
+          </div>
+        </li>
+      </ul>
     </div>
 
   </div>
-  <div class="corps">
-    <ul class="contenuCorps">
-      <li>
-        <a href="#">
-          <img src="../../assets/images/images.jpg" alt="img"> <br> Mathèmatiques
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="" alt="img"> <br> Anglais
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="" alt="img"> <br> Histo-Geo
-        </a>
-      </li>
-    </ul>
-  </div>
-
-</div>
+  <!--
+  kain
+-->

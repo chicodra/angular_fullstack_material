@@ -5,11 +5,11 @@
 }
 
 .haut {
-   
+
 }
 
 .toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
-    color: white; 
+    color: white;
   }
 
   .md-hue-2 {
@@ -23,22 +23,15 @@
   .md-toolbar-tools {
       width: 100%;
       height: 40px;
-      
+
   }
 
   .gauche {
       position: absolute;
       float: left;
-      background-color: red;
-      /*background-color: #283593;*/
-      width: 6%;
-      height: 90%;
+      width: 25%;
   }
 
-  .contenuGauche {
-      /*width: 15%;*/
-      /*margin-left: -px;*/
-  }
 
   .contenuGauche li a img {
       display: inline-block;
@@ -48,12 +41,14 @@
 
   .corps {
       /*margin: 0 auto;*/
-      margin-left: 50px;
+      margin-top: -200px;
+      margin-left: 400px;
   }
 
   .contenuCorps li {
       display: inline-block;
       margin-left: 50px;
+      margin: 0 auto;
   }
 
   .contenuCorps li a img {
@@ -69,18 +64,84 @@
         height: 120px;
   }
 
-  /*accordion*/
-  .list .item.item-accordion {
-  line-height: 38px;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: 0.09s all linear;
+
+/* accordeon pour kain */
+.md-accordion .expandCollapse {
+  width:30px;
+  height:30px;
+  position:relative;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#fff;
+  display:block;
+  margin-top: -2px;
+  margin-left: -2px;
+  overflow:hidden;
 }
-.list .item.item-accordion.ng-hide {
-  line-height: 0px;
+.md-accordion .expandCollapse:active {
+  border:0px;
 }
-.list .item.item-accordion.ng-hide-add,
-.list .item.item-accordion.ng-hide-remove {
-  display: block !important;
+.md-accordion .expandCollapse:before, .md-accordion .expandCollapse:after {
+  width:30px;
+  height:30px;
+  display:block;
+  position:absolute;
+  top:0; left:0;
+  line-height:32px;
+  text-align:center;
+  -webkit-transition: .3s all ease-out;
+  transition: .3s all ease-out;
 }
-/* FIN accordion */
+.md-accordion .expandCollapse:before {
+  opacity:1;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  content: "|";
+  margin-top:-3px;
+}
+.md-accordion .expandCollapse:after {
+  opacity:1;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  content: "|";
+  margin-left:-3px;
+}
+.md-accordion .active:before {
+  opacity:1;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-left:3px;
+  margin-top:0px;
+}
+
+.md-accordion .dataContent {
+  background: #F2F2F2;
+  height:0px;
+  overflow:hidden;
+  -webkit-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+}
+
+.md-accordion .activeContent {
+  height:auto;
+  padding:20px;
+  display:block;
+}
+
+.md-accordion md-toolbar{
+  cursor:pointer;
+  border-bottom:1px solid rgb(63,107,181)
+}
+
+
+.onglet {
+  height: 100px;
+  width: 200px;
+}
+
+.men-lecon {
+  padding: 0 10px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

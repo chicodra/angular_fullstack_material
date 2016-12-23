@@ -20,6 +20,16 @@ exports.show = function(req, res) {
   });
 };
 
+//Get Niveau By Label
+
+exports.GetNiveauByLabel = function(req, res) {
+  Niveau.find({label:req.params.id}, function (err, niveau) {
+    if(err) { return handleError(res, err); }
+    if(!niveau) { return res.status(404).send('Not Found'); }
+    return res.json(niveau);
+  });
+}; 
+
 //Get Niveau by Cycle
 
 exports.getNiveauByCycle = function (req, res) { 
