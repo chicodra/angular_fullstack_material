@@ -1,4 +1,4 @@
-<div class="navbar2">
+<!-- <div class="navbar2">
     <div class="list" hide show-gt-md show-md>
         <ul layout="row" layout-align="center strech" layout-padding="5">
             <li>
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-</div>
+</div> 
 
 <div class="intro" >
     <div layout="column" layout-align="center center">
@@ -44,10 +44,10 @@
             Boostez vos notes comme 1 million d’élèves.
         </h1>
         <div layout="row" layout-align="center center">
-            <md-card class="mdcard1" flex="35" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch layout-align="center center">
+            <md-card class="mdcard1"  md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch layout-align="center center">
                 <md-card-title>
                     <md-card-title-text>
-                        <span class="md-headline">Découvrez Kartable avant de vous inscrire</span>
+                        <span class="md-headline">Découvrez Educ Online avant de vous inscrire</span>
                     </md-card-title-text>
                 </md-card-title>
 
@@ -58,20 +58,10 @@
 
                     </div>-->
 
-<<<<<<< HEAD
-                    <div ng-cloak>
-                        <md-content class="lesCycles">
-=======
                     <div ng-cloak ng-init="init()">
                         <md-content >
-<<<<<<< HEAD
->>>>>>> 9ff878adeb01e2bc1b9cbaa5598472f442e045cc
-                            <md-tabs md-dynamic-height md-border-bottom>
-                                <md-tab ng-repeat="cycle in listCycles" label={{cycle.label}} ng-click="clickCycle(cycle)">
-=======
                             <md-tabs md-dynamic-height md-border-bottom md-selected=1>
-                                <md-tab  label={{listCycles[1].label}} md-on-select="clickCycle(listCycles[1])" ">
->>>>>>> c4fa3afe7db0481129d25a9715c2a32cbd2cbb50
+                                <md-tab  label={{listCycles[1].label}} md-on-select="clickCycle(listCycles[1])">
                                     <md-content class="md-padding">
                                         <md-button ng-repeat="classe in listNiveau"  ng-click="Partager(classe)" class='md-raised' ng-href="classe/{{classe.label}}">{{classe.abrv}}</md-button>
                                     </md-content>
@@ -84,7 +74,7 @@
                 </md-card-content>
             </md-card>
 
-            <md-card class="mdcard2" flex="40" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch layout-align="center center">
+            <!-- <md-card class="mdcard2" flex="40" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch layout-align="center center">
                 <md-card-title>
                     <md-card-title-text>
                         <span class="md-headline">Accédez gratuitement aux cours</span>
@@ -107,12 +97,12 @@
                         <md-button class="md-raised md-primary">s'inscrire avec facebook</md-button>
                     </div>
                 </md-card-content>
-            </md-card>
+            </md-card> -->
         </div>
     </div>
 </div>
 
-<div class="inter">
+<!-- <div class="inter">
     <section class="catalog" layout layout-wrap layout-align="center">
         <md-card flex="22" flex-sm="46" flex-xs="80" ng-class="{shaded:$mdMedia('xs') }">
             <md-card-title>
@@ -121,7 +111,7 @@
                 </md-card-title-text>
             </md-card-title>
             <md-card-content layout="row">
-                <img src="https://assets.kartable.fr/20161216153757/bundles/kartablecore/img/feature.png?1481899149">
+                <img src="https://assets.Educ Online.fr/20161216153757/bundles/Educ Onlinecore/img/feature.png?1481899149">
                 <span></span>
                 <div layout="column">
                     <p>
@@ -142,7 +132,7 @@
             </md-card-content>
         </md-card>
     </section>
-</div>
+</div> -->
 
 
-<div ng-include="'components/footer/footer.html'">
+<!-- <div ng-include="'components/footer/footer.html'"> -->
