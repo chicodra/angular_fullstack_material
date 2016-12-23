@@ -304,6 +304,57 @@ Lec.find({}).remove(function () {
   label: "Leçon 2 : DROITES DES MILIEUX",
   chapitre:"585837cf0c3fb6852ac78086",
     rang: 2
+},{
+  label: "Leçon 1 : Étude de Situation : Localisation carte (notion d'orientation et de représentation)",
+  chapitre:"585837cf0c3fb6852ac7807f",
+    rang: 1
+},{
+  label: "Leçon 2 : Conditions Physiques (Topographiques, Climatiques, edaphiques, Hydrographiques,Biogéographique etc) et contexte historique des principales cultures et leur évolution",
+  chapitre:"585837cf0c3fb6852ac7807f",
+    rang: 2
+},
+{
+  label: "Leçon 1 : Population Composition ethnique, évolution, répartition structure migrations etc",
+  chapitre:"585837cf0c3fb6852ac78080",
+    rang: 1
+},{
+  label: "Leçon 2 : Organisation de l'espace : 2tude des localités, de leur fonctions de leurs relations de leurs urbanisme etc",
+  chapitre:"585837cf0c3fb6852ac78080",
+    rang: 2
+},{
+  label: "Leçon 1 : Introduction le monde à la fin du VI éme Siecle",
+  chapitre:"585837cf0c3fb6852ac78083",
+    rang: 1
+},{
+  label: "Leçon 2 : La Naissance de l'islam ; L'Arabie préislamique,MOHAMED, LE CORAN",
+  chapitre:"585837cf0c3fb6852ac78083",
+    rang: 2
+},
+{
+  label: "Leçon 1 : L'Empire du Ghana",
+  chapitre:"585837cf0c3fb6852ac78084",
+    rang: 1
+},{
+  label: "Leçon 2 : Le Mouvement ALMORAVIDE",
+  chapitre:"585837cf0c3fb6852ac78084",
+    rang: 2
+},{
+  label: "Leçon 1 : L’Amérique du Nord : Naissance des Etats-UNIS",
+  chapitre:"585837cf0c3fb6852ac78087",
+    rang: 1
+},{
+  label: "Leçon 2 : L'Empire OTTMAN",
+  chapitre:"585837cf0c3fb6852ac78087",
+    rang: 2
+},
+{
+  label: "Leçon 1 : La Première Révolution Industrielle les transformations techniques économique et social",
+  chapitre:"585837cf0c3fb6852ac78088",
+    rang: 1
+},{
+  label: "Leçon 2 : Le Mouvement des idées au XVIII éme siecle",
+  chapitre:"585837cf0c3fb6852ac78088",
+    rang: 2
 },
 function () {
       console.log('finished populating Leçons');
