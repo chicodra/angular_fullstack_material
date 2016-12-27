@@ -2,8 +2,9 @@
 
 angular.module('appChicoApp')
 
-  .controller('ClasseCtrl', function ($scope, $routeParams, $http, socket, Domaine, Niveau, sousDomaine, Matiere, Chapitre, Lecon) {
+  .controller('ClasseCtrl', function ($scope, $routeParams, $http, $location, socket, Cycle, Domaine, Niveau, sousDomaine, Matiere, Chapitre, Lecon) {
     $scope.classeLib = $routeParams.classeLib;
+    $scope.cyclelib = $routeParams.cycle;
     $scope.visible = false;
     $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
@@ -16,23 +17,92 @@ angular.module('appChicoApp')
     }
 
 
-    function initNiveau() {
+    function checkCycle(libelle) {
+      $scope.bool = false;
+
+      Cycle.listCycles().then(function (listCycles) {
+        $scope.cycles = listCycles;
+        console.log('cycles', $scope.cycles)
+
+        console.log('libelle', libelle);
+        for (var id in $scope.cycles) {
+
+          if ($scope.cycles[id].libelle == libelle) {
+            $scope.cycle = $scope.cycles[id];
+            console.log('cycle', $scope.cycles[id].libelle);
+            $scope.bool = true;
+
+          }
+        }
+
+      });
+
+
+    }
+
+    function checkNiveau(libelle) {
+      $scope.boolniv = false;
+      Niveau.listeNiveauByCycle($scope.cycle.id).then(function (listNiveau) {
+        $scope.niveaux = listNiveau;
+        console.log('niveau', $scope.niveaux)
+
+        console.log('libelle', libelle);
+        for (var id in $scope.niveaux) {
+
+          if ($scope.niveaux[id].libelle == libelle) {
+            console.log('niveau', $scope.niveaux[id].libelle);
+            $scope.boolniv = true;
+
+          }
+        }
+
+
+      });
+
 
     }
 
     function init() {
       //console.log(Niveau.niveau);
 
+
       if (Niveau.niveau == null) {
+        checkCycle($scope.cyclelib);
+        window.setTimeout(function () {
 
-        Niveau.getNiveauByLabel($scope.classeLib).then(function (niveau) {
-          console.log("classe lib", niveau);
-          Niveau.niveau = niveau;
+          if ($scope.bool) {
+            console.log("true", $scope.bool);
+            checkNiveau($scope.classeLib)
+            window.setTimeout(function () {
+              console.log("classelib",$scope.boolniv);
+              if($scope.boolniv){
+                Niveau.getNiveauByLabel($scope.classeLib).then(function (niveau) {
+                  console.log("classe lib", niveau);
+                  Niveau.niveau = niveau;
 
-        });
+                });
+              }
+              else{$scope.$apply(function() { $location.path("/"); });}
+
+
+            },100)
+          }
+          else {
+            console.log("false", $scope.bool);
+            $scope.$apply(function() { $location.path("/"); });
+            //$location.path('/');
+            //console.log('url',$location.absUrl());
+          }
+          //
+
+
+        }, 200);
+
+
+
       }
       window.setTimeout(function () {
-        Domaine.listeDomaineByNiveau(Niveau.niveau._id).then(function (listDomaines) {
+        Domaine.listeDomaineByNiveau(Niveau.niveau.id).then(function (listDomaines) {
           $scope.listDomaines = listDomaines;
           console.log("liste domaines", $scope.listDomaines);
           //domaineClick($scope.listDomaines[0]);

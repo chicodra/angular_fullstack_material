@@ -12,7 +12,7 @@ angular.module('appChicoApp')
       var listNiveau=[];
       console.log(id);
       $http.get('/api/plniveaux/cycle/'+id ).then(function(listNiveaux) {
-        //console.log("cycle",listNiveaux.data);
+        console.log("niveau",listNiveaux.data);
         listNiveau=listNiveaux.data;
         deferred.resolve(listNiveau);
 
@@ -28,7 +28,7 @@ angular.module('appChicoApp')
       var deferred=$q.defer();
       var niveau=[];
       //console.log(id);
-      $http.get('/api/plniveaux/label/'+label ).then(function(niveaux) {
+      $http.get('/api/plniveaux/cycle/'+label ).then(function(niveaux) {
         console.log("niveau",niveaux.data);
         niveau=niveaux.data[0];
         deferred.resolve(niveau);

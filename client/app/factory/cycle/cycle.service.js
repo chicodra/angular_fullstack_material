@@ -4,6 +4,7 @@ angular.module('appChicoApp')
     .service('Cycle', function ($http,$q) {
     // Service logic
     // ...
+      this.cycles=null;
 
     this.listCycles=function () {
       var deferred=$q.defer();

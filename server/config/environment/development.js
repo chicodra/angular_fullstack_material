@@ -8,9 +8,9 @@ module.exports = {
   //   uri: 'mongodb://localhost/appchico-dev'
   // },
   mysql:{
-    "username": "kain",
-    "password": "passer",
-    "database": "simens_secondaire",
+    "username": "root",
+    "password": "Passer@1",
+    "database": "simen_secondaire",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port":"3306",
