@@ -60,10 +60,10 @@
 
                     <div ng-cloak ng-init="init()">
                         <md-content >
-                            <md-tabs md-dynamic-height md-border-bottom md-selected=1>
-                                <md-tab  label={{listCycles[2].libelle}} md-on-select="clickCycle(listCycles[2])">
+                            <md-tabs md-dynamic-height md-border-bottom md-selected=2>
+                                <md-tab  ng-repeat="cycle in listCycles"  label={{cycle.libelle}} md-on-select="clickCycle(cycle)">
                                     <md-content class="md-padding">
-                                        <md-button ng-repeat="classe in listNiveau"  ng-click="Partager(classe)" class='md-raised' ng-href="classe/{{classe.libelle}}">{{classe.libelle}}</md-button>
+                                        <md-button ng-repeat="classe in listNiveau"  ng-click="Partager(classe)" class='md-raised' ng-href="{{cycle.libelle}}/{{classe.libelle}}">{{classe.libelle}}</md-button>
                                     </md-content>
                                 </md-tab>
 

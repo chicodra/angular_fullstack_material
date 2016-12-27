@@ -44,6 +44,17 @@ var all = {
     }
   },
 
+   // MongoDB connection options
+  sql: {
+    host: 'localhost',
+    dialect: 'mysql',
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    }
+  },
+
   facebook: {
     clientID:     process.env.FACEBOOK_ID || 'id',
     clientSecret: process.env.FACEBOOK_SECRET || 'secret',
