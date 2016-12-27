@@ -7,7 +7,7 @@ angular.module('appChicoApp')
       var deferred=$q.defer();
       var listMatieres=[];
       //console.log(id);
-      $http.get('/api/matieres/sousdomaine/'+id ).then(function(list) {
+      $http.get('/api/pvfils/parent/'+id ).then(function(list) {
         console.log("matieres",list);
         listMatieres=list.data;
         deferred.resolve(listMatieres);

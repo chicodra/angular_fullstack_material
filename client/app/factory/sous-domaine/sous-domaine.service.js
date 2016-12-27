@@ -6,8 +6,8 @@ angular.module('appChicoApp')
     this.listeSousDomaineByDomaine=function (id) {
       var deferred=$q.defer();
       var listSousDomaine=[];
-      //console.log(id);
-      $http.get('/api/sous_domaines/domaine/'+id ).then(function(listSousDomaines) {
+      console.log(id);
+      $http.get('/api/pvparent/domaine/'+id ).then(function(listSousDomaines) {
         console.log("sous domaine",listSousDomaines);
         listSousDomaine=listSousDomaines.data;
         deferred.resolve(listSousDomaine);

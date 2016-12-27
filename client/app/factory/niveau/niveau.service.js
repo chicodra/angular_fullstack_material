@@ -27,8 +27,8 @@ angular.module('appChicoApp')
     this.getNiveauByLabel=function (label) {
       var deferred=$q.defer();
       var niveau=[];
-      //console.log(id);
-      $http.get('/api/plniveaux/cycle/'+label ).then(function(niveaux) {
+      console.log(label);
+      $http.get('/api/plniveaux/niveau/'+label ).then(function(niveaux) {
         console.log("niveau",niveaux.data);
         niveau=niveaux.data[0];
         deferred.resolve(niveau);
