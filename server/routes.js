@@ -18,6 +18,7 @@ module.exports = function (app) {
   app.use('/api/ptsituation', require('./kheuthie/plan_tab_situation'));
   app.use('/api/pvparent', require('./kheuthie/plan_vscol_matieres_disc_parent'));
   app.use('/api/plnivsdom', require('./kheuthie/plan_list_niveau_s_domaine'));
+  app.use('/api/pvfils', require('./kheuthie/plan_vscol_matieres_disc_fils'));
 
 
 

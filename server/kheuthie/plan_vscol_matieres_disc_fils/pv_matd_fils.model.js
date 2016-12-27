@@ -1,15 +1,18 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('plan_vscol_matieres_disc_fils', {
-    id: {
-      type: DataTypes.INTEGER(11),
+var Sequelize=require('sequelize');
+var db = require('../../models/connect');
+
+
+const Fils =db.cnx().define('plan_vscol_matieres_disc_fils',{
+ id: {
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     id_parent: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: true,
       references: {
         model: 'plan_vscol_matieres_disc_parents',
@@ -17,39 +20,43 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     code_mat: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     },
     alias: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     },
     libelle: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     },
     description: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     couleur: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     },
     image: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: true
     },
     id_op_saisie: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: true
     },
     date_last_modif: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: false,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     }
-  }, {
+},{
+  timestamps: true,
+    createdAt: false,
+    updatedAt: false,
     tableName: 'plan_vscol_matieres_disc_fils'
-  });
-};
+});
+
+module.exports = Fils
