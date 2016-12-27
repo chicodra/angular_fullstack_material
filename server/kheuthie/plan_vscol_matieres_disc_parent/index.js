@@ -1,12 +1,12 @@
 var express = require('express');
-var controller = require('./pl_niveau.controller');
+var controller = require('./pv_matd_parent.controller');
 
 var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
-router.get('/cycle/:id', controller.getNiveauByCycle);
-router.get('/niveau/:lib', controller.getNiveauByLib);
+router.get('/domaine/:id', controller.getParByDom);
+
 /*router.get('/matiere/:id', controller.getChapitreByMatieres);
 router.get('/:id', controller.show);
 router.post('/', controller.create);

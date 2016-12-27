@@ -2,8 +2,8 @@ var Niveau = require('./pl_niveau.model');
 
 //liste des niveaux
 exports.index = function(req, res) {
-  Niveau.findAll().then(function (cycles) {
-    return res.json(cycles);
+  Niveau.findAll().then(function (niveaux) {
+    return res.json(niveaux);
 
 
   });
@@ -11,8 +11,8 @@ exports.index = function(req, res) {
 
 //get niveau by id
 exports.show = function(req, res) {
-  Niveau.findById(req.params.id).then(function (cycles) {
-    return res.json(cycles);
+  Niveau.findById(req.params.id).then(function (niveaux) {
+    return res.json(niveaux);
 
 
   });
@@ -20,16 +20,16 @@ exports.show = function(req, res) {
 
 
 exports.getNiveauByCycle = function(req, res) {
-  Niveau.findAll({where : {id_cycle : req.params.id}}).then(function (cycles) {
-    return res.json(cycles);
+  Niveau.findAll({where : {id_cycle : req.params.id}}).then(function (niveaux) {
+    return res.json(niveaux);
 
 
   });
 };
 
 exports.getNiveauByLib = function(req, res) {
-  Niveau.findAll({where : {libelle : req.params.lib}}).then(function (cycles) {
-    return res.json(cycles);
+  Niveau.findAll({where : {libelle : req.params.lib}}).then(function (niveaux) {
+    return res.json(niveaux);
 
 
   });

@@ -1,15 +1,18 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('plan_tab_situation', {
-    id: {
-      type: DataTypes.INTEGER(11),
+var Sequelize=require('sequelize');
+var db = require('../../models/connect');
+
+
+const Situation =db.cnx().define('plan_tab_situation',{
+ id: {
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     id_niv: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'plan_list_niveau',
@@ -17,18 +20,22 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     situation: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     res_attendus: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     modal_exec: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     }
-  }, {
+},{
+  timestamps: true,
+    createdAt: false,
+    updatedAt: false,
     tableName: 'plan_tab_situation'
-  });
-};
+});
+
+module.exports = Situation
