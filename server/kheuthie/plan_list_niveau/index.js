@@ -6,6 +6,7 @@ var router = express.Router();
 router.get('/', controller.index);
 router.get('/:id', controller.show);
 router.get('/cycle/:id', controller.getNiveauByCycle);
+router.get('/cycle/:lib', controller.getNiveauByLib);
 /*router.get('/matiere/:id', controller.getChapitreByMatieres);
 router.get('/:id', controller.show);
 router.post('/', controller.create);

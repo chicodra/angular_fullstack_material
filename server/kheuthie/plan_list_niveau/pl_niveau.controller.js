@@ -27,3 +27,11 @@ exports.getNiveauByCycle = function(req, res) {
   });
 };
 
+exports.getNiveauByLib = function(req, res) {
+  Niveau.findAll({where : {libelle : req.params.lib}}).then(function (cycles) {
+    return res.json(cycles);
+
+
+  });
+};
+
