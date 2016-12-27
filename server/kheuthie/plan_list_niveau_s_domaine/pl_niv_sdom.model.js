@@ -1,15 +1,16 @@
 /* jshint indent: 2 */
+var Sequelize=require('sequelize');
+var db = require('../../models/connect');
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('plan_list_niveau_s_domaines', {
-    id: {
-      type: DataTypes.INTEGER(11),
+const Niv_Sdom =db.cnx().define('plan_list_niveau_s_domaines',{
+  id: {
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     id_niveau: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'plan_list_niveau',
@@ -17,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     id_s_domaine: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'plan_vscol_matieres_disc_parents',
@@ -25,19 +26,23 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     commentaires: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     date_last_modif: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: false,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     },
     id_op_saisie: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: true
     }
-  }, {
+},{
+  timestamps: true,
+    createdAt: false,
+    updatedAt: false,
     tableName: 'plan_list_niveau_s_domaines'
-  });
-};
+});
+
+module.exports = Niv_Sdom

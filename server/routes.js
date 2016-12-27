@@ -10,21 +10,16 @@ var path = require('path');
 module.exports = function (app) {
 
   // Insert routes below
-  app.use('/api/lecons', require('./api/lecon'));
-  app.use('/api/chapitres', require('./api/chapitre'));
-  app.use('/api/matieres', require('./api/matiere'));
-  app.use('/api/sous_domaines', require('./api/sous_domaine'));
-  app.use('/api/domaines', require('./api/domaine'));
-  app.use('/api/niveaus', require('./api/niveau'));
-  app.use('/api/cycles', require('./api/cycle'));
-  app.use('/api/things', require('./api/thing'));
-  app.use('/api/users', require('./api/user'));
-  app.use('/api/user', require('./models'));
-  app.use('/api/user', require('./models'));
+  
   app.use('/api/plcycles', require('./kheuthie/plan_list_cycle'));
   app.use('/api/plniveaux', require('./kheuthie/plan_list_niveau'));
   app.use('/api/pldom', require('./kheuthie/plan_list_domaines_matieres'));
   app.use('/api/pldomat', require('./kheuthie/plan_list_domaine_cycle'));
+  app.use('/api/ptsituation', require('./kheuthie/plan_tab_situation'));
+  app.use('/api/pvparent', require('./kheuthie/plan_vscol_matieres_disc_parent'));
+  app.use('/api/plnivsdom', require('./kheuthie/plan_list_niveau_s_domaine'));
+
+
 
 
 
