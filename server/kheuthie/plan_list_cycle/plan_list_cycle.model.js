@@ -29,7 +29,10 @@ const Cycle =db.cnx().define('plan_list_cycle',{
 },{
   timestamps: true,
     createdAt: false,
-    updatedAt: false
-});
+    updatedAt: false,
+    tableName: 'plan_list_cycle'
+}
+    
+  );
 
 module.exports = Cycle

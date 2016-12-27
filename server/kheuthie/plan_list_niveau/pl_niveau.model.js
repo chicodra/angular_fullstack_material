@@ -39,8 +39,11 @@ const Niveau =db.cnx().define('plan_list_niveau',{
 },{
   timestamps: true,
     createdAt: false,
-    updatedAt: false
+    updatedAt: false,
+    tableName: 'plan_list_niveau'
 }
+    
+  
 );
 
 module.exports = Niveau
