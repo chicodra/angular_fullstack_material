@@ -22,7 +22,10 @@ module.exports = function (app) {
   app.use('/api/user', require('./models'));
   app.use('/api/user', require('./models'));
   app.use('/api/plcycles', require('./kheuthie/plan_list_cycle'));
-    app.use('/api/plniveaux', require('./kheuthie/plan_list_niveau'));
+  app.use('/api/plniveaux', require('./kheuthie/plan_list_niveau'));
+  app.use('/api/pldom', require('./kheuthie/plan_list_domaines_matieres'));
+  app.use('/api/pldomat', require('./kheuthie/plan_list_domaine_cycle'));
+
 
 
 
