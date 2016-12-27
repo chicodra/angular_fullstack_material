@@ -8,3 +8,11 @@ exports.index = function(req, res) {
 
   });
 };
+
+exports.show = function(req, res) {
+  Cycle.findById(req.params.id).then(function (cycles) {
+    return res.json(cycles);
+
+
+  });
+};

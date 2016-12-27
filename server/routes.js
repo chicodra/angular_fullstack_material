@@ -22,6 +22,8 @@ module.exports = function (app) {
   app.use('/api/user', require('./models'));
   app.use('/api/user', require('./models'));
   app.use('/api/plcycles', require('./kheuthie/plan_list_cycle'));
+    app.use('/api/plniveaux', require('./kheuthie/plan_list_niveau'));
+
 
 
 

@@ -1,10 +1,11 @@
 var express = require('express');
-var controller = require('./plan_list_cycle.controller');
+var controller = require('./pl_niveau.controller');
 
 var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
+router.get('/cycle/:id', controller.getNiveauByCycle);
 /*router.get('/matiere/:id', controller.getChapitreByMatieres);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
