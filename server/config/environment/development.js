@@ -9,8 +9,8 @@ module.exports = {
   // },
   mysql:{
     "username": "root",
-    "password": "pass",
-    "database": "simens_secondaire",
+    "password": "Passer@1",
+    "database": "simen_secondaire",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port":"3306",

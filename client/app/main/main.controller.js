@@ -21,7 +21,7 @@ angular.module('appChicoApp')
       Cycle.listCycles().then(function (listCycles) {
         $scope.listCycles=listCycles;
         console.log("liste cycle",$scope.listCycles);
-        clickCycle($scope.listCycles[1]);
+        clickCycle($scope.listCycles[2]);
 
       });
 
@@ -34,10 +34,10 @@ angular.module('appChicoApp')
     //init();
     function clickCycle(cycle) {
       if (cycle != undefined){
-       // console.log("cycle",cycle)
+       console.log("cycle",cycle)
 
-        Niveau.listeNiveauByCycle(cycle._id).then(function (listNiveau) {
-          //console.log(listNiveau)
+        Niveau.listeNiveauByCycle(cycle.id).then(function (listNiveau) {
+          console.log(listNiveau)
           if(listNiveau==null ){
             $scope.listNiveau=[];
             //console.log("list Niveau",$scope.listNiveau);

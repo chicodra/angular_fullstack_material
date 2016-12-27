@@ -8,7 +8,7 @@ angular.module('appChicoApp')
     this.listCycles=function () {
       var deferred=$q.defer();
       var listCycle=[];
-      $http.get('/api/cycles').then(function(list) {
+      $http.get('/api/plcycles').then(function(list) {
         //console.log("cycle",list);
         listCycle=list.data;
         deferred.resolve(listCycle);
