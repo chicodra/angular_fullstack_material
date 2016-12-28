@@ -24,6 +24,11 @@ module.exports = function (app) {
   app.use('/api/profils', require('./kheuthie/plan_list_profil'));
   app.use('/api/semestres', require('./kheuthie/plan_list_semestre'));
   app.use('/api/series', require('./kheuthie/plan_list_series'));
+  app.use('/api/chapitreos', require('./kheuthie/plan_vscol1_chapitres_os'));
+  app.use('/api/primlecons', require('./kheuthie/plan_vscol1_prim_lecons'));
+  app.use('/api/zconnexions', require('./kheuthie/z_connexions'));
+  app.use('/api/zmaths', require('./kheuthie/z_math'));
+  app.use('/api/zleconnexions', require('./kheuthie/z_log_error_connexions'));
 
 
 

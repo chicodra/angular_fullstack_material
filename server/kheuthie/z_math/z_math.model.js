@@ -1,43 +1,50 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('z_math', {
-    id: {
-      type: DataTypes.BIGINT,
+var Sequelize=require('sequelize');
+var db = require('../../models/connect');
+
+
+const Zmath =db.cnx().define('z_math',{
+  id: {
+      type: Sequelize.BIGINT,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     NIVEAU: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     TITRE_CHAPITRE: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     CHAPITRES: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     TITRE_LECON: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     CODE_LECON: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     CONTENU_LECON: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: false
     },
     import: {
-      type: DataTypes.INTEGER(1),
+      type: Sequelize.INTEGER,
       allowNull: false,
       defaultValue: "0"
     }
-  }, {
+},{
+  timestamps: true,
+    createdAt: false,
+    updatedAt: false,
     tableName: 'z_math'
-  });
-};
+});
+
+module.exports = Zmath
