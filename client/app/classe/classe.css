@@ -5,6 +5,20 @@
 }
 
 .haut {
+  height: 30px;
+}
+
+.gauche {
+  background-color: #6E6E6E;
+  /*width: 70px;*/
+}
+
+/*.toolbardemoScrollShrink .face {
+  width: 48px;
+  margin: 16px;
+  border-radius: 48px;
+  border: 1px solid #ddd; }*/
+/*.haut {
 
 }
 
@@ -13,7 +27,7 @@
   }
 
   .md-hue-2 {
-    /*width: 100%;*/
+    /*width: 100%;
   }
   .contentHaut {
       width: 100%;
@@ -40,7 +54,7 @@
   }
 
   .corps {
-      /*margin: 0 auto;*/
+      /*margin: 0 auto;
       margin-top: -200px;
       margin-left: 400px;
   }
@@ -65,7 +79,7 @@
   }
 
 
-/* accordeon pour kain */
+/* accordeon pour kain 
 .md-accordion .expandCollapse {
   width:30px;
   height:30px;
@@ -144,4 +158,4 @@
   padding: 0 10px;
   line-height: 1.5;
   margin-bottom: 10px;
-}
+}*/
