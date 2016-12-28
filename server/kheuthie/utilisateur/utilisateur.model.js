@@ -1,23 +1,26 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('utilisateur', {
-    id: {
-      type: DataTypes.INTEGER(11),
+var Sequelize=require('sequelize');
+var db = require('../../models/connect');
+
+
+const Utilisateur =db.cnx().define('utilisateur',{
+  id: {
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     username: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     password: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     id_profil: {
-      type: DataTypes.INTEGER(4),
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'plan_list_profil',
@@ -25,28 +28,32 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     prenom: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     nom: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     date_last_modif: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: false,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     },
     id_op_saisie: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: true
     },
     etat: {
-      type: DataTypes.ENUM('0','1'),
+      type: Sequelize.ENUM('0','1'),
       allowNull: false,
       defaultValue: "0"
     }
-  }, {
+},{
+  timestamps: true,
+    createdAt: false,
+    updatedAt: false,
     tableName: 'utilisateur'
-  });
-};
+});
+
+module.exports = Utilisateur

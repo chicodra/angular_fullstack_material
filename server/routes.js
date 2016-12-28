@@ -20,6 +20,9 @@ module.exports = function (app) {
   app.use('/api/plnivsdom', require('./kheuthie/plan_list_niveau_s_domaine'));
   app.use('/api/pvfils', require('./kheuthie/plan_vscol_matieres_disc_fils'));
   app.use('/api/pv1chapitre', require('./kheuthie/plan_vscol1_chapitres'));
+  app.use('/api/utilisateurs', require('./kheuthie/utilisateur'));
+  app.use('/api/profils', require('./kheuthie/plan_list_profil'));
+
 
 
 
