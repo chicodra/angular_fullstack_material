@@ -114,49 +114,45 @@ angular.module('appChicoApp')
             initParams();
             $scope.listSousDomaines = [];
             console.log("on domaine click", domaine);
-            sousDomaine.listeSousDomaineByDomaine(domaine._id).then(function(listSousDomaines) {
-                console.log("list sous domaine", listSousDomaines);
-                $scope.listSousDomaines = listSousDomaines;
-                // sousDomaineClick(listSousDomaines[0]);
+          
+      sousDomaine.listeSousDomaineByDomaine(domaine.id).then(function (listSousDomaines) {
+        console.log("list sous domaine", listSousDomaines);
+        $scope.listSousDomaines = listSousDomaines;
+        // sousDomaineClick(listSousDomaines[0]);
 
-            });
 
-
-        }
+        })}
         //domaineClick($scope.listDomaines[0]);
         $scope.domaineClick = domaineClick;
 
         function sousDomaineClick(sousdomaine) {
             $scope.listChapitres = [];
-            Matiere.listeMatieresBySousDomaines(sousdomaine._id).then(function(listMatieres) {
-                console.log("list matieres", listMatieres);
-                $scope.listMatieres = listMatieres;
-                //MatiereClick(listMatieres[0]);
+            
+      console.log('sous domaine',sousdomaine);
+      Matiere.listeMatieresBySousDomaines(sousdomaine.id).then(function (listMatieres) {
+        console.log("list matieres", listMatieres);
+        $scope.listMatieres = listMatieres;
+        //MatiereClick(listMatieres[0]);
 
-
-            });
-
-        }
+        })}
         $scope.sousDomaineClick = sousDomaineClick;
 
         function MatiereClick(matiere) {
 
             console.log('matieres', matiere);
-            Chapitre.listeChapitresByMatiere(matiere._id).then(function(listChapitre) {
-                console.log(' liste chapitres', listChapitre);
-                $scope.listChapitres = listChapitre;
-                //ChapitreClick(listChapitre[0]);
+            
+      Chapitre.listeChapitresByMatiere(matiere.id).then(function (listChapitre) {
+        console.log(' liste chapitres', listChapitre);
+        $scope.listChapitres = listChapitre;
+        //ChapitreClick(listChapitre[0]);
 
-
-            });
-
-        }
+        })}
         $scope.MatiereClick = MatiereClick;
 
         function ChapitreClick(chapitre) {
             $scope.listLecons = [];
             $scope.visible = true;
-            Lecon.listLeconsByChapitre(chapitre._id).then(function(listLecons) {
+            Lecon.listLeconsByChapitre(chapitre.id).then(function(listLecons) {
                 console.log("list lecons", listLecons);
                 $scope.listLecons = listLecons;
 
@@ -165,6 +161,7 @@ angular.module('appChicoApp')
 
         }
         $scope.ChapitreClick = ChapitreClick;
+
 
         $scope.collapseAll = function(domaine) {
             for (var i in $scope.listDomaines) {

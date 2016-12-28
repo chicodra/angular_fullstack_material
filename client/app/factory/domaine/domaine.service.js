@@ -7,7 +7,7 @@ angular.module('appChicoApp')
       var deferred=$q.defer();
       var listDomaine=[];
       //console.log(id);
-      $http.get('/api/domaines/niveau/'+id ).then(function(listDomaines) {
+      $http.get('/api/pldom/').then(function(listDomaines) {
         console.log("cycle",listDomaines.data);
         listDomaine=listDomaines.data;
         deferred.resolve(listDomaine);
