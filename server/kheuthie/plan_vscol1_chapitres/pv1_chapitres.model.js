@@ -1,15 +1,17 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('plan_vscol1_chapitres', {
-    id: {
-      type: DataTypes.BIGINT,
+var Sequelize=require('sequelize');
+var db = require('../../models/connect');
+
+const Chapitre =db.cnx().define('plan_vscol1_chapitres',{
+  id: {
+      type: Sequelize.BIGINT,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     id_mat_disc_fils: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'plan_vscol_matieres_disc_fils',
@@ -17,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     id_niveau: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'plan_list_niveau',
@@ -25,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     id_parent: {
-      type: DataTypes.BIGINT,
+      type: Sequelize.BIGINT,
       allowNull: true,
       references: {
         model: 'plan_vscol1_chapitres',
@@ -33,35 +35,39 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     type_chapitre: {
-      type: DataTypes.ENUM('palier','oa','chapitre','competence'),
+      type: Sequelize.ENUM('palier','oa','chapitre','competence'),
       allowNull: false
     },
     libelle: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     commentaires: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     lib_integration: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: false
     },
     z_theme: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     date_last_modif: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: false,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     },
     id_op_saisie: {
-      type: DataTypes.INTEGER(11),
+      type: Sequelize.INTEGER,
       allowNull: true
     }
-  }, {
+},{
+  timestamps: true,
+    createdAt: false,
+    updatedAt: false,
     tableName: 'plan_vscol1_chapitres'
-  });
-};
+});
+
+module.exports = Chapitre
