@@ -17,14 +17,14 @@
           <md-toolbar ng-init="domaine.expanded = false" ng-click="collapseAll(domaine); domaineClick(domaine)">
             <div class="md-toolbar-tools">
               <h2>
-                <span>{{domaine.label}} </span>
+                <span>{{domaine.libelle}} </span>
               </h2>
               <span flex=""></span>
               <span ng-class="{expandCollapse:true, active:domaine.expanded}"></span>
             </div>
           </md-toolbar>
           <div ng-class="{dataContent:true, activeContent:domaine.expanded}">
-            <md-button ng-repeat="sousdomaine in listSousDomaines" class="md-raised md-warn" ng-click="sousDomaineClick(sousdomaine)" > {{sousdomaine.label}} </md-button>
+            <md-button ng-repeat="sousdomaine in listSousDomaines" class="md-raised md-warn" ng-click="sousDomaineClick(sousdomaine)" > {{sousdomaine.libelle}} </md-button>
           </div>
       </md-content>
       </div>
@@ -34,14 +34,14 @@
       <ul class="contenuCorps">
         <li ng-repeat="matiere in listMatieres" ng-mouseover="MatiereClick(matiere)">
           <a href="#">
-            <img src="../../assets/images/images.jpg" alt="img"> <br> {{matiere.label}}
+            <img src="../../assets/images/images.jpg" alt="img"> <br> {{matiere.libelle}}
           </a>
           <div class="chapitres">
             <li ng-repeat="chapitre in listChapitres">
-             <md-button class="md-raised md-warn" ng-click="ChapitreClick(chapitre)"> {{chapitre.label}} </md-button>
+             <md-button class="md-raised md-warn" ng-click="ChapitreClick(chapitre)"> {{chapitre.libelle}} </md-button>
              <div ng-repeat="lecon in listLecons" class="men-lecon">
                <div ng-if="lecon.chapitre === chapitre._id">
-               {{lecon.label}}
+               {{lecon.libelle}}
 
                </div>
                <div ng-if="lecon.chapitre !== chapitre._id">
